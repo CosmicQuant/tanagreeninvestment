@@ -37,7 +37,7 @@ function App() {
   // Carousel images and subtitles for homepage hero
   const carouselImages = [
     {
-      url: 'https://images.unsplash.com/photo-1441974231531-c6227db76b6e?auto=format&fit=crop&w=1920&q=80',
+      url: 'https://plus.unsplash.com/premium_photo-1730037811879-d6594d862eb6?q=80&w=1139&auto=format&fit=crop&ixlib=rb-4.1.0&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D',
       subtitle: 'NURTURING NATURE, EMPOWERING COMMUNITIES',
     },
     {
@@ -188,39 +188,40 @@ function App() {
             </section>
             <section className="features-vertical">
               <div className="features-viewport">
+                {/* Updated sliding programs with new key programs and descriptions */}
                 <div className="feature-row animate-on-scroll full-page-feature">
-                  <img src="https://images.unsplash.com/photo-1441974231531-c6227db76b6e?auto=format&fit=crop&w=1200&q=80" alt="Forest Conservation" className="feature-img-large" />
+                  <img src="https://images.unsplash.com/photo-1441974231531-c6227db76b6e?auto=format&fit=crop&w=1200&q=80" alt="Forest Conservation & Protection" className="feature-img-large" />
                   <div className="feature-desc">
-                    <h3>Forest Conservation</h3>
+                    <h3>Forest Conservation & Protection</h3>
                     <p>
-                      Kenya's forests are vital for biodiversity, water catchment, and climate regulation. Our Forest Conservation program mobilizes communities to restore degraded forests, prevent illegal logging, and promote sustainable woodlot management. Through education, reforestation drives, and partnerships with local leaders, we ensure that Kenya's natural heritage is protected for generations to come. Join us in planting trees, nurturing seedlings, and building resilient forest ecosystems across the country.
+                      We are committed to safeguarding Kenya’s natural forests. We actively counter deforestation through continuous awareness campaigns and capacity-building programs for local communities, schools, and youth groups. By collaborating with enforcement agencies like the <b>Kenya Forest Service (KFS)</b>, county environmental departments, and local administrations, we strengthen forest protection measures, reduce illegal logging, and promote sustainable land-use practices. Furthermore, we work closely with established conservancies, such as <b>Ishaqbini Conservancy in Masalani</b>, to implement habitat restoration and wildlife protection awareness campaigns, creating vital synergies for biodiversity conservation.
                     </p>
                   </div>
                 </div>
                 <div className="feature-row animate-on-scroll full-page-feature">
-                  <img src="https://images.unsplash.com/photo-1574323347407-f5e1ad6d020b?auto=format&fit=crop&w=1200&q=80" alt="Sustainable Agriculture" className="feature-img-large" />
+                  <img src="https://images.unsplash.com/photo-1542601906990-b4d3fb778b09?auto=format&fit=crop&w=1200&q=80" alt="Afforestation & Reforestation" className="feature-img-large" />
                   <div className="feature-desc">
-                    <h3>Sustainable Agriculture</h3>
+                    <h3>Afforestation & Reforestation</h3>
                     <p>
-                      Our Sustainable Agriculture initiative empowers farmers to adopt climate-smart practices that improve soil health, boost yields, and secure food supplies. We provide training in agroforestry, organic farming, and water conservation, helping communities adapt to changing weather patterns. By integrating trees and crops, we create productive landscapes that support livelihoods and protect the environment. Discover how our model farms and demonstration plots are transforming rural Kenya into a hub of innovation and sustainability.
+                      Our large-scale afforestation and reforestation projects target critical ecological zones. This includes planting trees in <b>Tana River riparian zones</b> to prevent soil erosion and restore natural water cycles, as well as in the <b>Boni Forest</b> and coastal areas, which are vital biodiversity hotspots. We also implement structured urban greening programs in public spaces across <b>Garissa, Masalani, Ijara, and Kwale Counties</b> to enhance air quality, create shade, and beautify urban environments.
                     </p>
                   </div>
                 </div>
                 <div className="feature-row animate-on-scroll full-page-feature">
-                  <img src="https://images.unsplash.com/photo-1704270269291-378a379249f9?q=80&w=1170&auto=format&fit=crop&ixlib=rb-4.1.0&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D" alt="Women Empowerment" className="feature-img-large" />
+                  <img src="https://images.unsplash.com/photo-1704270269291-378a379249f9?q=80&w=1170&auto=format&fit=crop&ixlib=rb-4.1.0&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D" alt="Women-Centered Empowerment" className="feature-img-large" />
                   <div className="feature-desc">
-                    <h3>Women Empowerment</h3>
+                    <h3>Women-Centered Empowerment</h3>
                     <p>
-                      Women are at the heart of our conservation efforts. Through our Women Empowerment program, we support female-headed households with training in tree nursery management, financial literacy, and leadership. Women lead community greening projects, manage income-generating activities, and inspire the next generation of environmental stewards. By investing in women, we build stronger families, healthier communities, and a greener Kenya. Explore the stories of women who are transforming their lives and landscapes through our initiatives.
+                      Recognizing the pivotal role of women in environmental conservation, we support female-headed households in <b>Garissa (Waberi Ward)</b> and <b>Masalani Municipality</b>. We achieve this by supplying seedlings, providing training in tree nursery management and tree planting techniques, and purchasing tree-based products (e.g., fruits, seedlings, timber substitutes) to provide sustainable income and reduce reliance on destructive activities like charcoal burning.
                     </p>
                   </div>
                 </div>
                 <div className="feature-row animate-on-scroll full-page-feature">
-                  <img src="https://images.unsplash.com/photo-1695469107292-789742e3f24a?q=80&w=735&auto=format&fit=crop&ixlib=rb-4.1.0&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D" alt="Urban Greening" className="feature-img-large" />
+                  <img src="https://images.unsplash.com/photo-1574323347407-f5e1ad6d020b?auto=format&fit=crop&w=1200&q=80" alt="Sustainable Land Development & Agriculture" className="feature-img-large" />
                   <div className="feature-desc">
-                    <h3>Urban Greening</h3>
+                    <h3>Sustainable Land Development & Agriculture</h3>
                     <p>
-                      Our Urban Greening program transforms cities into vibrant, healthy spaces. We create parks, plant street trees, and establish rooftop gardens to improve air quality and provide recreational areas. Urban greening reduces heat, supports wildlife, and enhances the beauty of our neighborhoods. Through partnerships with city councils, schools, and businesses, we make urban Kenya a model for sustainable living. Experience the impact of green spaces on well-being, community pride, and environmental resilience.
+                      We take a holistic approach to land management and food security. We strategically acquire and develop land for <b>sustainable agricultural ventures</b>, including tree farming, horticulture, and organic farming, as well as for eco-friendly land resale, ensuring parcels are managed to support forest regeneration and sustainable land-use policies. Complementing this, we promote <b>mixed and rotational farming practices</b> within <b>Tana River County</b> to enhance soil fertility, improve water retention, increase crop yields, and create climate-smart farming models that improve food security.
                     </p>
                   </div>
                 </div>
@@ -305,120 +306,42 @@ function App() {
               <h2 className="section-title">Our Key Programs & Activities</h2>
               
               <div className="programs-grid">
-                <div className="program-card">
-                  <div className="program-header">
-                    <span className="program-icon">🚫</span>
-                    <h3>Countering Deforestation</h3>
-                  </div>
-                  <p>Running awareness campaigns and community training sessions to reduce illegal logging and promote sustainable land use. We collaborate with KFS, county environmental offices, and local administrations.</p>
-                  <ul>
-                    <li>Community education programs</li>
-                    <li>Enforcement collaboration</li>
-                    <li>Sustainable land-use promotion</li>
-                  </ul>
-                </div>
-
-                <div className="program-card">
-                  <div className="program-header">
-                    <span className="program-icon">🦓</span>
-                    <h3>Conservancy Partnerships</h3>
-                  </div>
-                  <p>Working with established conservancies like Ishaqbini Conservancy in Masalani to implement comprehensive conservation initiatives.</p>
-                  <ul>
-                    <li>Tree planting initiatives</li>
-                    <li>Wildlife protection awareness</li>
-                    <li>Community-led forest monitoring</li>
-                  </ul>
-                </div>
-
+                {/* Updated key programs and activities */}
                 <div className="program-card">
                   <div className="program-header">
                     <span className="program-icon">🌳</span>
-                    <h3>Afforestation & Tree Planting</h3>
+                    <h3>Forest Conservation & Protection</h3>
                   </div>
-                  <p>Large-scale tree planting projects targeting critical ecosystems across Kenya's most vulnerable areas.</p>
-                  <ul>
-                    <li>Tana River riparian zones</li>
-                    <li>Boni Forest restoration</li>
-                    <li>Urban center greening</li>
-                  </ul>
+                  <p>
+                    We are committed to safeguarding Kenya’s natural forests. We actively counter deforestation through continuous awareness campaigns and capacity-building programs for local communities, schools, and youth groups. By collaborating with enforcement agencies like the <b>Kenya Forest Service (KFS)</b>, county environmental departments, and local administrations, we strengthen forest protection measures, reduce illegal logging, and promote sustainable land-use practices. Furthermore, we work closely with established conservancies, such as <b>Ishaqbini Conservancy in Masalani</b>, to implement habitat restoration and wildlife protection awareness campaigns, creating vital synergies for biodiversity conservation.
+                  </p>
                 </div>
-
                 <div className="program-card">
                   <div className="program-header">
-                    <span className="program-icon">🏙️</span>
-                    <h3>Urban Greening</h3>
+                    <span className="program-icon">🌱</span>
+                    <h3>Afforestation & Reforestation</h3>
                   </div>
-                  <p>Collaborating with county governments to create beautiful, functional green spaces in urban areas.</p>
-                  <ul>
-                    <li>School tree planting</li>
-                    <li>Market beautification</li>
-                    <li>Public park development</li>
-                  </ul>
+                  <p>
+                    Our large-scale afforestation and reforestation projects target critical ecological zones. This includes planting trees in <b>Tana River riparian zones</b> to prevent soil erosion and restore natural water cycles, as well as in the <b>Boni Forest</b> and coastal areas, which are vital biodiversity hotspots. We also implement structured urban greening programs in public spaces across <b>Garissa, Masalani, Ijara, and Kwale Counties</b> to enhance air quality, create shade, and beautify urban environments.
+                  </p>
                 </div>
-
                 <div className="program-card">
                   <div className="program-header">
                     <span className="program-icon">👩</span>
-                    <h3>Women Empowerment</h3>
+                    <h3>Women-Centered Empowerment</h3>
                   </div>
-                  <p>Supporting female-headed households in Garissa and Masalani through tree-based income opportunities.</p>
-                  <ul>
-                    <li>Seedling supply & training</li>
-                    <li>Tree nursery management</li>
-                    <li>Sustainable income generation</li>
-                  </ul>
+                  <p>
+                    Recognizing the pivotal role of women in environmental conservation, we support female-headed households in <b>Garissa (Waberi Ward)</b> and <b>Masalani Municipality</b>. We achieve this by supplying seedlings, providing training in tree nursery management and tree planting techniques, and purchasing tree-based products (e.g., fruits, seedlings, timber substitutes) to provide sustainable income and reduce reliance on destructive activities like charcoal burning.
+                  </p>
                 </div>
-
                 <div className="program-card">
                   <div className="program-header">
                     <span className="program-icon">🌾</span>
-                    <h3>Climate-Smart Agriculture</h3>
+                    <h3>Sustainable Land Development & Agriculture</h3>
                   </div>
-                  <p>Promoting sustainable farming practices to regenerate soil and increase food security in Tana River County.</p>
-                  <ul>
-                    <li>Mixed farming techniques</li>
-                    <li>Rotational farming systems</li>
-                    <li>Soil fertility improvement</li>
-                  </ul>
-                </div>
-              </div>
-            </section>
-          </div>
-        );
-
-      case 'impact':
-        return (
-          <div className="page-content">
-            <section className="impact-section">
-              <h2 className="section-title">Our Impact</h2>
-              
-              <div className="stats-grid">
-                {impactStats.map((stat, index) => (
-                  <div key={index} className={`stat-card ${animatedStats ? 'animated' : ''}`}>
-                    <div className="stat-icon">{stat.icon}</div>
-                    <div className="stat-number">{stat.number}</div>
-                    <div className="stat-label">{stat.label}</div>
-                  </div>
-                ))}
-              </div>
-
-              <div className="impact-areas">
-                <div className="impact-card">
-                  <h3>🌍 Climate Mitigation</h3>
-                  <p>Increased carbon sequestration through tree planting and forest restoration, contributing to Kenya's climate goals.</p>
-                </div>
-                <div className="impact-card">
-                  <h3>🦋 Biodiversity Protection</h3>
-                  <p>Enhanced wildlife habitats and reduced human-wildlife conflicts through strategic conservation efforts.</p>
-                </div>
-                <div className="impact-card">
-                  <h3>💰 Economic Empowerment</h3>
-                  <p>Income opportunities for women, youth, and local farmers through tree-based value chains and sustainable agriculture.</p>
-                </div>
-                <div className="impact-card">
-                  <h3>🏘️ Community Resilience</h3>
-                  <p>Strengthened local capacity to adapt to climate change and conserve natural resources.</p>
+                  <p>
+                    We take a holistic approach to land management and food security. We strategically acquire and develop land for <b>sustainable agricultural ventures</b>, including tree farming, horticulture, and organic farming, as well as for eco-friendly land resale, ensuring parcels are managed to support forest regeneration and sustainable land-use policies. Complementing this, we promote <b>mixed and rotational farming practices</b> within <b>Tana River County</b> to enhance soil fertility, improve water retention, increase crop yields, and create climate-smart farming models that improve food security.
+                  </p>
                 </div>
               </div>
             </section>
