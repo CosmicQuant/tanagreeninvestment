@@ -1,3 +1,103 @@
+/* Ensure partners section text is visible on background image */
+.partners-bg .section-title,
+.partners-bg .section-description,
+.partners-bg .partners-summary-section span {
+  color: #fff !important;
+  text-shadow: 0 2px 12px rgba(0,0,0,0.25);
+}
+/* Partners Section Background */
+.partners-bg {
+  position: relative;
+  background-image: url('https://plus.unsplash.com/premium_photo-1663947578514-8be72b831e17?q=80&w=1075&auto=format&fit=crop&ixlib=rb-4.1.0&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D');
+  background-size: cover;
+  background-position: center center;
+  background-repeat: no-repeat;
+  min-height: 480px;
+  padding: 4rem 0;
+  z-index: 1;
+  width: 100vw;
+  left: 50%;
+  right: 50%;
+  margin-left: -50vw;
+  margin-right: -50vw;
+  box-shadow: none;
+  background-color: transparent;
+}
+.partners-bg-overlay {
+  display: none;
+}
+.partners-content {
+  position: relative;
+  z-index: 3;
+}
+/* Partners Tape Animation */
+/* Partners Tape Animation */
+.partners-tape {
+  width: 100%;
+  overflow: hidden;
+  margin: 2rem 0 0 0;
+  padding: 1rem 0;
+  background: transparent;
+}
+.tape-track {
+  display: flex;
+  gap: 2.5rem;
+  animation: tape-scroll 30s linear infinite;
+  align-items: center;
+  white-space: nowrap;
+}
+.partner-logo-tape-item {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  min-width: 120px;
+}
+.partner-logo-tape {
+  height: 60px;
+  width: auto;
+  object-fit: contain;
+  filter: drop-shadow(0 2px 8px rgba(0,0,0,0.08));
+  background: white;
+  border-radius: 8px;
+  padding: 0.5rem 1rem;
+}
+.partner-logo-name {
+  font-size: 0.85rem;
+  color: #2d5a27;
+  font-weight: 600;
+  margin-top: 0.5rem;
+  text-align: center;
+  white-space: normal;
+  background: rgba(255,255,255,0.85);
+  border-radius: 6px;
+  padding: 0.2rem 0.5rem;
+  box-shadow: 0 2px 8px rgba(0,0,0,0.04);
+  min-width: 120px;
+  max-width: 180px;
+  word-break: break-word;
+  overflow: visible;
+  text-overflow: unset;
+}
+.tape-track {
+  display: flex;
+  gap: 2.5rem;
+  animation: tape-scroll 30s linear infinite;
+  align-items: center;
+}
+.partner-logo-tape {
+  height: 60px;
+  width: auto;
+  object-fit: contain;
+  filter: drop-shadow(0 2px 8px rgba(0,0,0,0.08));
+  background: white;
+  border-radius: 8px;
+  padding: 0.5rem 1rem;
+}
+@keyframes tape-scroll {
+  0% { transform: translateX(100%); }
+  100% { transform: translateX(-100%); }
+}
 /* Carousel fade transition for hero image and subtitle */
 .carousel-hero {
   transition: background-image 1.2s cubic-bezier(0.4, 0, 0.2, 1);
@@ -1015,10 +1115,10 @@ body {
 
 .footer-content {
   display: grid;
-  grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+  grid-template-columns: repeat(auto-fit, minmax(220px, 1fr));
   gap: 2rem;
   margin-bottom: 2rem;
-  text-align: center;
+  text-align: left;
   position: relative;
   z-index: 2;
 }
