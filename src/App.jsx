@@ -286,8 +286,8 @@ function App() {
                   <div className="tape-track">
                     {partnerTapeItems.map((item, idx) => (
                       <div key={item.file} className="partner-logo-tape-item">
-                        <img
-                          src={`/assets/${item.file}`}
+                          <img
+                            src={`/assets/${item.file}`}
                           alt={item.file === 'Ministry Of Environment.png' ? 'Ministry of Environment' : item.name}
                           className="partner-logo-tape"
                         />
@@ -528,18 +528,18 @@ function App() {
             {/* Partner logos tape below partners section */}
             <div className="partners-tape">
               <div className="tape-track">
-                {[
-                  { file: 'GARISSA COUNTY.png', name: 'Garissa County' },
-                  { file: 'Ishaqbini Conservancy.png', name: 'Ishaqbini Conservancy' },
-                  { file: 'Kenya Forest Services.jpg', name: 'Kenya Forest Services' },
-                  { file: 'Kwale County.png', name: 'Kwale County' },
-                  { file: 'Ministry Of Environment.png', name: 'Ministry Of Environment' },
-                  { file: 'NCDF-Ijara.png', name: 'NCDF Ijara' },
-                  { file: 'UNEP.png', name: 'UNEP' }
-                ].map((item, idx) => (
+                    {[
+                      { file: 'GARISSA-COUNTY.png', name: 'Garissa County' },
+                      { file: 'Ishaqbini-Conservancy.png', name: 'Ishaqbini Conservancy' },
+                      { file: 'Kenya-Forest-Services.jpg', name: 'Kenya Forest Services' },
+                      { file: 'Kwale-County.png', name: 'Kwale County' },
+                      { file: 'Ministry-Of-Environment.png', name: 'Ministry Of Environment' },
+                      { file: 'NCDF-Ijara.png', name: 'NCDF Ijara' },
+                      { file: 'UNEP.png', name: 'UNEP' }
+                    ].map((item, idx) => (
                   <div key={item.file} className="partner-logo-tape-item">
-                    <img
-                      src={`/src/assets/${item.file}`}
+                        <img
+                          src={`/assets/${item.file}`}
                       alt={item.name}
                       className="partner-logo-tape"
                     />
