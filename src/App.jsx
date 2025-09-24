@@ -561,7 +561,19 @@ function App() {
               
               <div className="contact-container">
                 <div className="contact-form-container">
-                  <form className="contact-form" name="contact" method="POST" data-netlify="true">
+                  <form className="contact-form" name="contact" method="POST" data-netlify="true" onSubmit={(e) => {
+                    e.preventDefault();
+                    const form = e.target;
+                    const data = new FormData(form);
+                    fetch('/', {
+                      method: 'POST',
+                      headers: { 'Content-Type': 'application/x-www-form-urlencoded' },
+                      body: new URLSearchParams(data).toString(),
+                    })
+                      .then(() => setShowSuccess(true))
+                      .catch(() => alert('There was an error submitting the form. Please try again.'));
+                  }}>
+                    <input type="hidden" name="form-name" value="contact" />
                     <div className="form-group">
                       <label htmlFor="name">Full Name</label>
                       <input type="text" id="name" name="name" required />
@@ -579,6 +591,11 @@ function App() {
                       <textarea id="message" name="message" rows="5" required></textarea>
                     </div>
                     <button type="submit" className="submit-btn">Send Message</button>
+                    {showSuccess && (
+                      <div style={{marginTop: '1.5rem', color: '#2d5a27', fontWeight: 600, fontSize: '1.1rem', background: '#e8f5e8', padding: '1rem', borderRadius: '8px', textAlign: 'center'}}>
+                        Thank you for contacting us! We have received your message and will get back to you soon.
+                      </div>
+                    )}
                   </form>
                 </div>
                 
