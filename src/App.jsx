@@ -29,6 +29,7 @@ const impactStats = [
 ];
 
 function App() {
+  const [showSuccess, setShowSuccess] = useState(false);
   // State declarations must come first
   const [currentPage, setCurrentPage] = useState('home');
   const [isMenuOpen, setIsMenuOpen] = useState(false);
