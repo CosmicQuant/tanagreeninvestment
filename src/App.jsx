@@ -186,11 +186,11 @@ function App() {
 
   const renderPageContent = () => {
     const partnerTapeItems = [
-  { file: 'GARISSA COUNTY.png', name: 'Garissa County' },
-  { file: 'Ishaqbini Conservancy.png', name: 'Ishaqbini Conservancy' },
-  { file: 'Kenya Forest Services.jpg', name: 'Kenya Forest Services' },
-  { file: 'Kwale County.png', name: 'Kwale County' },
-  { file: 'Ministry Of Environment.png', name: 'Ministry of Environment' },
+  { file: 'GARISSA-COUNTY.png', name: 'Garissa County' },
+  { file: 'Ishaqbini-Conservancy.png', name: 'Ishaqbini Conservancy' },
+  { file: 'Kenya-Forest-Services.jpg', name: 'Kenya Forest Services' },
+  { file: 'Kwale-County.png', name: 'Kwale County' },
+  { file: 'Ministry-Of-Environment.png', name: 'Ministry of Environment' },
   { file: 'NCDF-Ijara.png', name: 'NCDF Ijara' },
   { file: 'UNEP.png', name: 'UNEP' }
     ];
@@ -750,9 +750,8 @@ function App() {
               <ul style={{listStyle: 'none', padding: 0}}>
                 <li><a href="#" onClick={() => setCurrentPage('about')}>About Us</a></li>
                 <li><a href="#" onClick={() => setCurrentPage('programs')}>Our Programs</a></li>
-                <li><a href="#" onClick={() => setCurrentPage('impact')}>Our Impact</a></li>
                 <li><a href="#" onClick={() => setCurrentPage('partners')}>Our Partners</a></li>
-                <li><a href="#" onClick={() => setCurrentPage('contact')}>Contact</a></li>
+                <li><a href="#" onClick={() => setCurrentPage('contact')}>Contact Us</a></li>
               </ul>
             </div>
             {/* Contact Info */}
