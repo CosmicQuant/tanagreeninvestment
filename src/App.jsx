@@ -18,7 +18,7 @@ const heroImages = {
   programs: 'https://images.unsplash.com/photo-1542601906990-b4d3fb778b09?auto=format&fit=crop&w=1920&q=80',
   impact: 'https://images.unsplash.com/photo-1519904981063-b0cf448d479e?auto=format&fit=crop&w=1920&q=80',
   partners: 'https://images.unsplash.com/photo-1637094408647-0d81d08f81b5?q=80&w=1170&auto=format&fit=crop&ixlib=rb-4.1.0&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D',
-  contact: '/src/assets/boniforest.png'
+  contact: '/assets/boniforest.png'
 };
 
 const impactStats = [
@@ -42,7 +42,7 @@ function App() {
       subtitle: 'NURTURING NATURE, EMPOWERING COMMUNITIES',
     },
     {
-      url: '/src/assets/women.jpg', // Local women.jpg image
+    url: '/assets/women.jpg', // Local women.jpg image
       subtitle: 'EMPOWERING COMMUNITIES FOR GREEN GROWTH',
     },
     {
@@ -50,7 +50,7 @@ function App() {
       subtitle: 'SUSTAINABLE LAND DEVELOPMENT & SMART AGRICULTURE',
     },
     {
-      url: '/src/assets/tanariver.jpg', // Local tanariver.jpg image
+    url: '/assets/tanariver.jpg', // Local tanariver.jpg image
       subtitle: 'CONSERVING KENYA’S NATURAL HERITAGE',
     },
   ];
@@ -62,6 +62,8 @@ function App() {
         animateProgramsVerticalOnScroll();
       }, 300);
     }
+      // Scroll to top when changing page
+      window.scrollTo({ top: 0, behavior: 'smooth' });
   }, [currentPage]);
 
   // Auto-advance carousel every 4 seconds (slower)
@@ -208,7 +210,7 @@ function App() {
           <section className="features-vertical">
             <div className="features-viewport">
               <div className="feature-row full-page-feature">
-                <img src="https://images.unsplash.com/photo-1441974231531-c6227db76b6e?auto=format&fit=crop&w=1200&q=80" alt="Forest Conservation & Protection" className="feature-img-large" />
+                <img src="/assets/boniforest.png" alt="Forest Conservation & Protection" className="feature-img-large" />
                 <div className="feature-desc">
                   <h3>Forest Conservation & Protection</h3>
                   <p>
@@ -226,7 +228,7 @@ function App() {
                 </div>
               </div>
               <div className="feature-row full-page-feature">
-                <img src="https://images.unsplash.com/photo-1704270269291-378a379249f9?q=80&w=1170&auto=format&fit=crop&ixlib=rb-4.1.0&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D" alt="Women-Centered Empowerment" className="feature-img-large" />
+                <img src="/assets/women.jpg" alt="Women-Centered Empowerment" className="feature-img-large" />
                 <div className="feature-desc">
                   <h3>Women-Centered Empowerment</h3>
                   <p>
@@ -284,7 +286,7 @@ function App() {
                     {partnerTapeItems.map((item, idx) => (
                       <div key={item.file} className="partner-logo-tape-item">
                         <img
-                          src={`/src/assets/${item.file}`}
+                          src={`/assets/${item.file}`}
                           alt={item.file === 'Ministry Of Environment.png' ? 'Ministry of Environment' : item.name}
                           className="partner-logo-tape"
                         />
@@ -312,7 +314,7 @@ function App() {
           },
           {
             title: 'Strategic Partnerships with Conservancies & Wildlife Areas',
-            image: '/src/assets/giraffe.png',
+            image: '/assets/giraffe.PNG',
             description: 'Through liaison and joint programs with conservancies such as Ishaqbini Conservancy in Masalani, we engage in tree planting, ecosystem restoration, and wildlife protection campaigns. These collaborations secure critical biodiversity corridors while creating new carbon sequestration zones.',
             impacts: [
               'Secured critical biodiversity corridors.',
@@ -332,7 +334,7 @@ function App() {
           },
           {
             title: 'Urban Greening & Climate-Resilient Cities',
-            image: '/src/assets/urbangreening.jpg',
+            image: '/assets/urbangreening.jpg',
             description: 'Through town greening projects, we plant climate-smart trees in schools, markets, roadsides, and public parks—cooling urban heat islands, improving air quality, and enhancing community well-being.',
             impacts: [
               'Reduced urban heat islands and improved air quality.',
@@ -342,7 +344,7 @@ function App() {
           },
           {
             title: 'Women-Centered Capacity Building & Livelihood Enhancement',
-            image: '/src/assets/women.jpg',
+            image: '/assets/women.jpg',
             description: 'In Garissa (Waberi Ward) and Masalani Municipality, we empower female-headed households by supplying tree seedlings, training in tree nursery management, and purchasing tree products to create steady green income streams.',
             impacts: [
               'Supports gender inclusion and social co-benefits for carbon projects.',
@@ -416,9 +418,9 @@ function App() {
                       style={{ width: '50%', height: '60vh', objectFit: 'cover', borderRadius: '18px', boxShadow: '0 4px 24px rgba(45,90,39,0.10)' }}
                     />
                     <div style={{ flex: 1, minWidth: '260px', padding: '2rem 0' }}>
-                      <h3 style={{ color: '#2d5a27', fontWeight: 700, fontSize: '2.3rem', marginBottom: '1.2rem' }}>{program.title}</h3>
-                      <p style={{ fontSize: '1.25rem', color: '#444', marginBottom: '1.5rem' }}>{program.description}</p>
-                      <ul style={{ fontWeight: 600, color: '#6faf6f', fontSize: '1.1rem', marginBottom: '0.7rem', paddingLeft: '1.2rem', listStyle: 'disc' }}>
+                      <h3 style={{ color: '#2d5a27', fontWeight: 700, fontSize: '1.7rem', marginBottom: '1.1rem' }}>{program.title}</h3>
+                      <p style={{ fontSize: '1rem', color: '#444', marginBottom: '1.2rem' }}>{program.description}</p>
+                      <ul style={{ fontWeight: 600, color: '#6faf6f', fontSize: '0.97rem', marginBottom: '0.6rem', paddingLeft: '1.2rem', listStyle: 'disc' }}>
                         {program.impacts && program.impacts.map((impact, i) => (
                           <li key={i}>{impact}</li>
                         ))}
@@ -452,12 +454,12 @@ function App() {
               <h2 className="section-title" style={{marginTop: '3rem', textAlign: 'center'}}>Meet the Team</h2>
               <div className="team-grid" style={{display: 'flex', gap: '2rem', justifyContent: 'center', flexWrap: 'wrap', marginTop: '2rem', textAlign: 'center'}}>
                 <div className="team-card" style={{background: 'white', borderRadius: '16px', boxShadow: '0 2px 16px rgba(45,90,39,0.07)', padding: '2rem', minWidth: '220px', maxWidth: '260px', textAlign: 'center'}}>
-                  <img src={"/src/assets/Yusuf Ahmed.jpeg"} alt="Yusuf Ahmed" style={{width: '90px', height: '90px', borderRadius: '50%', objectFit: 'cover', marginBottom: '1rem', border: '3px solid #6faf6f'}} />
+                    <img src={"/assets/Yusuf Ahmed.jpeg"} alt="Yusuf Ahmed" style={{width: '90px', height: '90px', borderRadius: '50%', objectFit: 'cover', marginBottom: '1rem', border: '3px solid #6faf6f'}} />
                   <h4 style={{color: '#2d5a27', marginBottom: '0.5rem'}}>Yusuf Ahmed</h4>
                   <p style={{fontWeight: 600, color: '#666'}}>Founder & CEO</p>
                 </div>
                 <div className="team-card" style={{background: 'white', borderRadius: '16px', boxShadow: '0 2px 16px rgba(45,90,39,0.07)', padding: '2rem', minWidth: '220px', maxWidth: '260px', textAlign: 'center'}}>
-                  <img src={"/src/assets/Mohamed Ismail.jpeg"} alt="Mohammed Ismail" style={{width: '90px', height: '90px', borderRadius: '50%', objectFit: 'cover', marginBottom: '1rem', border: '3px solid #6faf6f'}} />
+                    <img src={"/assets/Mohamed Ismail.jpeg"} alt="Mohammed Ismail" style={{width: '90px', height: '90px', borderRadius: '50%', objectFit: 'cover', marginBottom: '1rem', border: '3px solid #6faf6f'}} />
                   <h4 style={{color: '#2d5a27', marginBottom: '0.5rem'}}>Mohammed Ismail</h4>
                   <p style={{fontWeight: 600, color: '#666'}}>Operations Manager</p>
                 </div>
@@ -559,7 +561,7 @@ function App() {
               
               <div className="contact-container">
                 <div className="contact-form-container">
-                  <form className="contact-form" action="https://formspree.io/f/your-form-id" method="POST">
+                  <form className="contact-form" name="contact" method="POST" data-netlify="true">
                     <div className="form-group">
                       <label htmlFor="name">Full Name</label>
                       <input type="text" id="name" name="name" required />
@@ -618,30 +620,47 @@ function App() {
               <span className="tagline">Nurturing Nature, Empowering Communities</span>
             </div>
             
-            <nav className={`nav nav-centered ${isMenuOpen ? 'nav-open' : ''}`}>
+            {/* Desktop navigation */}
+            <nav className="nav nav-centered desktop-nav">
               {navigationItems.map((item) => (
                 <button
                   key={item.id}
                   className={`nav-item ${currentPage === item.id ? 'active' : ''}`}
-                  onClick={() => {
-                    setCurrentPage(item.id);
-                    setIsMenuOpen(false);
-                  }}
+                  onClick={() => setCurrentPage(item.id)}
                 >
                   <span className="nav-icon">{item.icon}</span>
                   <span className="nav-label">{item.label}</span>
                 </button>
               ))}
             </nav>
-            
+            {/* Hamburger icon for mobile */}
             <button 
               className="mobile-menu-btn"
+              aria-label="Open menu"
               onClick={() => setIsMenuOpen(!isMenuOpen)}
+              style={{ background: 'none', border: 'none', padding: '0.5rem', marginLeft: '1rem', cursor: 'pointer', display: 'flex', flexDirection: 'column', justifyContent: 'center', alignItems: 'center' }}
             >
-              <span></span>
-              <span></span>
-              <span></span>
+              <span style={{ width: '28px', height: '4px', background: '#2d5a27', margin: '5px 0', borderRadius: '2px' }}></span>
+              <span style={{ width: '28px', height: '4px', background: '#2d5a27', margin: '5px 0', borderRadius: '2px' }}></span>
+              <span style={{ width: '28px', height: '4px', background: '#2d5a27', margin: '5px 0', borderRadius: '2px' }}></span>
             </button>
+            {/* Mobile menu overlay */}
+            {isMenuOpen && (
+              <nav className="mobile-nav" style={{ position: 'fixed', top: 0, left: 0, width: '100vw', height: '100vh', background: 'rgba(45,90,39,0.97)', zIndex: 2000, display: 'flex', flexDirection: 'column', alignItems: 'center', justifyContent: 'center' }}>
+                {navigationItems.map((item) => (
+                  <button
+                    key={item.id}
+                    className={`nav-item${currentPage === item.id ? ' active' : ''}`}
+                    style={{ color: 'white', fontSize: '1.5rem', margin: '1rem 0', background: 'none', border: 'none' }}
+                    onClick={() => { setCurrentPage(item.id); setIsMenuOpen(false); }}
+                  >
+                    <span className="nav-icon">{item.icon}</span>
+                    <span className="nav-label">{item.label}</span>
+                  </button>
+                ))}
+                <button onClick={() => setIsMenuOpen(false)} style={{ marginTop: '2rem', color: '#fff', fontSize: '1.2rem', background: 'none', border: '2px solid #fff', borderRadius: '8px', padding: '0.7rem 2rem' }}>Close</button>
+              </nav>
+            )}
           </div>
         </div>
       </header>

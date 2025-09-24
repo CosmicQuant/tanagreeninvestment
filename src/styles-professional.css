@@ -1,3 +1,25 @@
+/* Mobile navigation styles */
+@media (max-width: 768px) {
+  .desktop-nav {
+    display: none !important;
+  }
+  .mobile-menu-btn {
+    display: flex !important;
+  }
+}
+
+.mobile-menu-btn {
+  display: none;
+}
+
+.mobile-nav .nav-item {
+  color: #fff;
+  font-size: 1.5rem;
+  margin: 1rem 0;
+  background: none;
+  border: none;
+  text-align: center;
+}
 /* Ensure partners section text is visible on background image */
 .partners-bg .section-title,
 .partners-bg .section-description,

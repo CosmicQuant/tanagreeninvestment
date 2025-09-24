@@ -1,3 +1,15 @@
+/* Smaller font sizes for program cards */
+.program-card-vertical .feature-desc h3,
+.program-card-vertical .program-title {
+  font-size: 1.7rem;
+}
+.program-card-vertical .feature-desc p,
+.program-card-vertical .program-description {
+  font-size: 1rem;
+}
+.program-card-vertical .program-impacts {
+  font-size: 0.97rem;
+}
 .program-card-vertical {
   opacity: 0;
   transform: translateY(60px) scale(0.97);
