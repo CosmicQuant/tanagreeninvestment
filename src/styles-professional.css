@@ -1243,8 +1243,22 @@ body {
 .info-card p,
 .info-card a,
 .partner-card h3,
+.partner-card p,
 .partner-card ul,
-.partner-card li {
+.partner-card li,
+.feature-card h3,
+.feature-card p,
+.feature-card ul,
+.feature-card li,
+.stat-card *,
+.impact-card h3,
+.impact-card p,
+.impact-card ul,
+.impact-card li,
+.value-card h3,
+.value-card p,
+.value-card ul,
+.value-card li {
   color: #000 !important;
 }
 
