@@ -260,15 +260,15 @@ body {
 
 /* Header with Glass Effect */
 .header {
-  background: rgba(45, 90, 39, 0.95);
+  background: rgba(255, 255, 255, 0.15);
   backdrop-filter: blur(20px);
   color: white;
   padding: 1rem 0;
-  box-shadow: 0 4px 30px rgba(0, 0, 0, 0.1);
+  box-shadow: 0 4px 30px rgba(0, 0, 0, 0.05);
   position: sticky;
   top: 0;
   z-index: 1000;
-  border-bottom: 1px solid rgba(255, 255, 255, 0.1);
+  border-bottom: 1px solid rgba(255, 255, 255, 0.2);
   animation: slideDown 0.8s ease-out;
 }
 
