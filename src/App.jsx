@@ -220,7 +220,7 @@ function App() {
         return (
           <div className="page-content">
             <section className="intro-section">
-              <h2 className="section-title carousel-title-animate">Nature Conservation & Climate Management</h2>
+              <h2 className="section-title carousel-title-animate">Our Key Programs</h2>
               <p className="section-subtitle home-centered">
                 Building a sustainable future through conservation, community empowerment, and climate action.
               </p>
