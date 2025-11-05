@@ -81,6 +81,7 @@
   background-size: cover;
   background-position: center center;
   background-repeat: no-repeat;
+  background-attachment: fixed;
   min-height: 480px;
   padding: 4rem 0;
   z-index: 1;
@@ -105,17 +106,22 @@
 /* Partners Tape Animation */
 /* Partners Tape Animation */
 .partners-tape {
-  width: 100%;
+  width: 100vw;
   overflow: hidden;
   margin: 2rem 0 0 0;
   padding: 1rem 0;
   background: transparent;
+  position: relative;
+  left: 50%;
+  right: 50%;
+  margin-left: -50vw;
+  margin-right: -50vw;
 }
 
 .tape-track {
   display: flex;
   gap: 2.5rem;
-  animation: tape-scroll 30s linear infinite;
+  animation: tape-scroll 15s linear infinite;
   align-items: center;
   white-space: nowrap;
 }
@@ -1480,6 +1486,7 @@ body {
   .partners-bg {
     padding: 3rem 0;
     min-height: auto;
+    background-attachment: scroll;
   }
 
   .partners-summary-section h2 {
@@ -2008,6 +2015,7 @@ body {
 
   .partners-bg {
     padding: 1.75rem 0.75rem;
+    background-attachment: scroll;
   }
 
   .partners-summary-section h2 {
