@@ -10,7 +10,7 @@
 }
 
 .mobile-menu-btn {
-  display: none;
+  display: none !important;
   background: none;
   border: none;
   padding: 0.5rem;
