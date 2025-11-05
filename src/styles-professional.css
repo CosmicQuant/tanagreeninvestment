@@ -260,15 +260,18 @@ body {
 
 /* Header with Glass Effect */
 .header {
-  background: rgba(255, 255, 255, 0.15);
-  backdrop-filter: blur(20px);
+  background: transparent;
+  backdrop-filter: none;
   color: white;
   padding: 1rem 0;
-  box-shadow: 0 4px 30px rgba(0, 0, 0, 0.05);
-  position: sticky;
+  box-shadow: none;
+  position: absolute;
   top: 0;
+  left: 0;
+  right: 0;
+  width: 100%;
   z-index: 1000;
-  border-bottom: 1px solid rgba(255, 255, 255, 0.2);
+  border-bottom: none;
   animation: slideDown 0.8s ease-out;
 }
 
@@ -309,15 +312,16 @@ body {
   -webkit-text-fill-color: transparent;
   background-clip: text;
   animation: logoGlow 2s ease-in-out infinite alternate;
+  filter: drop-shadow(0 2px 8px rgba(0, 0, 0, 0.5));
 }
 
 @keyframes logoGlow {
   from {
-    filter: drop-shadow(0 0 5px rgba(111, 175, 111, 0.3));
+    filter: drop-shadow(0 0 5px rgba(0, 0, 0, 0.5)) drop-shadow(0 2px 8px rgba(0, 0, 0, 0.5));
   }
 
   to {
-    filter: drop-shadow(0 0 15px rgba(111, 175, 111, 0.6));
+    filter: drop-shadow(0 0 15px rgba(111, 175, 111, 0.6)) drop-shadow(0 2px 8px rgba(0, 0, 0, 0.5));
   }
 }
 
@@ -325,6 +329,7 @@ body {
   display: block;
   font-size: 0.85rem;
   margin-bottom: 0.2rem;
+  text-shadow: 0 2px 8px rgba(0, 0, 0, 0.7);
 }
 
 .tagline {
@@ -334,6 +339,7 @@ body {
   margin-top: 0.25rem;
   letter-spacing: 0.1em;
   animation: fadeInUp 1s ease-out 0.3s both;
+  text-shadow: 0 2px 8px rgba(0, 0, 0, 0.7);
 }
 
 .hero-content {
@@ -380,6 +386,7 @@ body {
   position: relative;
   overflow: hidden;
   justify-content: center;
+  text-shadow: 0 2px 8px rgba(0, 0, 0, 0.7);
 }
 
 .nav-item::before {
