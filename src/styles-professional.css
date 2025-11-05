@@ -862,7 +862,9 @@ body {
 .stat-card,
 .impact-card,
 .partner-card,
-.value-card {
+.value-card,
+.about-card,
+.team-card {
   background: white !important;
   color: #000 !important;
   color-scheme: light;
@@ -1258,7 +1260,13 @@ body {
 .value-card h3,
 .value-card p,
 .value-card ul,
-.value-card li {
+.value-card li,
+.about-card,
+.about-card h3,
+.about-card p,
+.team-card,
+.team-card h4,
+.team-card p {
   color: #000 !important;
 }
 
