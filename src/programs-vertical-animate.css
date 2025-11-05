@@ -26,3 +26,130 @@
   transform: translateY(0) scale(1);
   pointer-events: auto;
 }
+
+/* Mobile optimizations for Programs page */
+@media (max-width: 1024px) {
+  .program-card-vertical {
+    flex-direction: column !important;
+    min-height: auto;
+    padding: 1.5rem;
+    gap: 1.5rem;
+  }
+  
+  .program-card-vertical img {
+    width: 100% !important;
+    max-width: 100% !important;
+    height: 40vh !important;
+    max-height: 350px !important;
+    margin-top: 0 !important;
+  }
+  
+  .program-card-vertical > div {
+    flex: 1 !important;
+    min-width: 100% !important;
+    padding: 1rem 0 !important;
+    margin-top: 0 !important;
+  }
+  
+  .program-card-vertical h3 {
+    font-size: 1.5rem !important;
+    text-align: center;
+  }
+  
+  .program-card-vertical p {
+    font-size: 0.95rem !important;
+  }
+  
+  .program-card-vertical ul {
+    font-size: 0.9rem !important;
+  }
+}
+
+@media (max-width: 768px) {
+  .programs-section {
+    padding: 2rem 0;
+  }
+  
+  .programs-section .section-title {
+    font-size: 1.75rem !important;
+    padding: 0 1rem;
+  }
+  
+  .programs-section .section-description {
+    font-size: 0.95rem !important;
+    padding: 0 1rem;
+  }
+  
+  .programs-vertical-list {
+    padding: 0 0.5rem;
+  }
+  
+  .program-card-vertical {
+    padding: 1.25rem;
+    margin-bottom: 2rem;
+    gap: 1.25rem;
+  }
+  
+  .program-card-vertical img {
+    height: 35vh !important;
+    max-height: 300px !important;
+    border-radius: 12px !important;
+  }
+  
+  .program-card-vertical > div {
+    padding: 0.75rem 0 !important;
+  }
+  
+  .program-card-vertical h3 {
+    font-size: 1.4rem !important;
+    margin-bottom: 0.75rem !important;
+  }
+  
+  .program-card-vertical p {
+    font-size: 0.9rem !important;
+    line-height: 1.6 !important;
+  }
+  
+  .program-card-vertical ul {
+    font-size: 0.85rem !important;
+    padding-left: 1rem !important;
+  }
+  
+  .program-card-vertical ul li {
+    margin-bottom: 0.5rem;
+  }
+}
+
+@media (max-width: 480px) {
+  .programs-section .section-title {
+    font-size: 1.5rem !important;
+  }
+  
+  .programs-section .section-description {
+    font-size: 0.9rem !important;
+  }
+  
+  .program-card-vertical {
+    padding: 1rem;
+    margin-bottom: 1.5rem;
+    gap: 1rem;
+  }
+  
+  .program-card-vertical img {
+    height: 30vh !important;
+    max-height: 250px !important;
+    border-radius: 10px !important;
+  }
+  
+  .program-card-vertical h3 {
+    font-size: 1.25rem !important;
+  }
+  
+  .program-card-vertical p {
+    font-size: 0.85rem !important;
+  }
+  
+  .program-card-vertical ul {
+    font-size: 0.8rem !important;
+  }
+}

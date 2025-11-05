@@ -9,3 +9,37 @@
     transform: translateY(0);
   }
 }
+
+/* Mobile optimizations for About Us hero */
+@media (max-width: 768px) {
+  .about-hero-animated {
+    padding: 1rem;
+    max-width: 100% !important;
+    margin: 2rem auto !important;
+  }
+  
+  .about-hero-animated h1 {
+    font-size: 2rem !important;
+    margin-bottom: 1rem !important;
+  }
+  
+  .about-hero-animated p {
+    font-size: 0.95rem !important;
+    line-height: 1.6 !important;
+  }
+}
+
+@media (max-width: 480px) {
+  .about-hero-animated {
+    padding: 0.75rem;
+    margin: 1.5rem auto !important;
+  }
+  
+  .about-hero-animated h1 {
+    font-size: 1.75rem !important;
+  }
+  
+  .about-hero-animated p {
+    font-size: 0.9rem !important;
+  }
+}
