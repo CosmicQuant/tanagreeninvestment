@@ -10,6 +10,19 @@
 
 .mobile-menu-btn {
   display: none;
+  background: none;
+  border: none;
+  padding: 0.5rem;
+  cursor: pointer;
+  z-index: 1001;
+}
+
+.mobile-menu-btn span {
+  transition: all 0.3s ease;
+}
+
+.mobile-nav {
+  backdrop-filter: blur(20px);
 }
 
 .mobile-nav .nav-item {
@@ -19,6 +32,36 @@
   background: none;
   border: none;
   text-align: center;
+  transition: all 0.3s ease;
+  padding: 0.75rem 2rem;
+  border-radius: 12px;
+}
+
+.mobile-nav .nav-item:hover,
+.mobile-nav .nav-item.active {
+  background: rgba(255, 255, 255, 0.15);
+  transform: scale(1.05);
+}
+
+/* Mobile-specific touch optimizations */
+@media (hover: none) and (pointer: coarse) {
+  /* Increase touch target sizes */
+  .nav-item,
+  button,
+  a {
+    min-height: 44px;
+    min-width: 44px;
+  }
+  
+  /* Remove hover effects on touch devices */
+  .nav-item:hover::before {
+    display: none;
+  }
+  
+  /* Optimize animations for mobile performance */
+  * {
+    -webkit-tap-highlight-color: rgba(111, 175, 111, 0.2);
+  }
 }
 /* Ensure partners section text is visible on background image */
 .partners-bg .section-title,
@@ -1341,16 +1384,19 @@ body {
   }
 }
 
+/* Mobile Responsive Design - Enhanced */
 @media (max-width: 768px) {
+  /* Header optimizations */
   .header-content {
-    min-height: 80px;
-    height: 80px;
-    padding: 1rem 1.5rem;
+    min-height: 70px;
+    height: 70px;
+    padding: 0.75rem 1rem;
     gap: 0;
   }
   
   .logo h1 {
-    font-size: 1.1rem;
+    font-size: 1rem;
+    line-height: 1.3;
   }
   
   .logo .tagline {
@@ -1361,114 +1407,154 @@ body {
     display: none;
   }
   
+  /* Hero section optimization */
   .hero {
-    height: 60vh;
-    min-height: 400px;
+    height: 55vh;
+    min-height: 350px;
     background-attachment: scroll;
+    background-position: center center;
   }
   
   .hero-title {
-    font-size: 2.5rem !important;
+    font-size: 2rem !important;
+    line-height: 1.2;
+    margin-bottom: 1rem;
   }
   
   .hero-subtitle {
-    font-size: 1.1rem !important;
+    font-size: 1rem !important;
     padding: 0 1rem;
+    line-height: 1.5;
   }
   
   .hero-content {
     padding: 1rem;
+    max-width: 100%;
   }
   
+  /* Features section mobile optimization */
   .full-page-feature {
     flex-direction: column !important;
-    padding: 2rem 1rem;
+    padding: 1.5rem 1rem;
     text-align: center;
     gap: 1.5rem;
     min-height: auto;
     padding-top: 2rem;
+    padding-bottom: 2rem;
   }
   
   .feature-img-large {
     width: 100%;
     max-width: 100%;
-    height: 35vh;
-    max-height: 280px;
+    height: 40vh;
+    max-height: 300px;
     margin-bottom: 1rem;
     margin-top: 0;
     border-radius: 12px;
   }
   
   .feature-desc {
-    padding: 1rem;
+    padding: 1.25rem;
     text-align: left;
     max-width: 100%;
     margin-top: 0;
+    width: 100%;
   }
   
   .feature-desc h3 {
     font-size: 1.5rem;
     margin-bottom: 1rem;
     text-align: center;
+    line-height: 1.3;
   }
   
   .feature-desc p {
     font-size: 0.95rem;
-    line-height: 1.6;
+    line-height: 1.7;
+    text-align: left;
   }
   
+  .feature-desc ul {
+    font-size: 0.9rem;
+    line-height: 1.6;
+    padding-left: 1.2rem;
+  }
+  
+  /* Grid layouts mobile optimization */
   .features-grid,
   .programs-grid {
     grid-template-columns: 1fr;
     gap: 1.5rem;
+    padding: 0 0.5rem;
   }
   
+  /* Stats grid mobile optimization */
   .stats-grid {
     grid-template-columns: 1fr;
     gap: 1.5rem;
+    padding: 0 1rem;
   }
   
   .stat-card {
     min-width: 100%;
     max-width: 100%;
     padding: 2rem 1.5rem;
+    margin: 0 auto;
   }
   
   .stat-number {
     font-size: 2.5rem;
+    margin-bottom: 0.5rem;
   }
   
   .stat-label {
     font-size: 1rem;
   }
   
+  .stat-icon {
+    font-size: 2.8rem;
+  }
+  
+  /* Other grid layouts */
   .impact-areas,
   .partners-grid,
   .vision-values {
     grid-template-columns: 1fr;
+    padding: 0 1rem;
   }
   
+  /* Typography mobile adjustments */
   .section-title {
     font-size: 2rem !important;
     margin-bottom: 1.5rem;
+    padding: 0 1rem;
+    line-height: 1.3;
   }
   
   .section-subtitle,
   .home-centered {
     font-size: 1.2rem !important;
+    line-height: 1.5;
+    padding: 0 1rem;
   }
   
   .section-description {
     font-size: 1rem;
     padding: 0 1rem;
+    line-height: 1.7;
   }
   
-  /* Intro section */
+  /* Intro section mobile */
   .intro-section {
-    padding: 2rem 0;
+    padding: 2rem 1rem;
   }
   
-  /* Contact page */
+  /* Contact page mobile */
+  .contact-container {
+    gap: 2rem;
+    padding: 0 1rem;
+  }
+  
   .contact-form {
     padding: 1.5rem;
   }
@@ -1481,7 +1567,12 @@ body {
     font-size: 1.2rem;
   }
   
-  /* Footer */
+  .form-group input,
+  .form-group textarea {
+    font-size: 16px; /* Prevents zoom on iOS */
+  }
+  
+  /* Footer mobile */
   .footer {
     padding: 3rem 0 1.5rem;
   }
@@ -1490,13 +1581,14 @@ body {
     grid-template-columns: 1fr;
     gap: 2rem;
     text-align: center;
+    padding: 0 1rem;
   }
   
   .footer-section ul {
     text-align: center;
   }
   
-  /* About page cards */
+  /* About page mobile */
   .about-cards-grid {
     flex-direction: column !important;
     padding: 0 1rem;
@@ -1518,19 +1610,21 @@ body {
     max-width: 100% !important;
   }
   
-  /* Partners tape */
+  /* Partner logos mobile */
   .partner-logo-tape {
     height: 50px;
+    padding: 0.4rem 0.8rem;
   }
   
   .partner-logo-name {
     font-size: 0.75rem;
     min-width: 100px;
+    max-width: 160px;
   }
   
-  /* Impact stats section */
+  /* Impact stats section mobile */
   .impact-stats-section {
-    padding: 3rem 0;
+    padding: 3rem 1rem;
   }
   
   .impact-stats-section .section-title {
@@ -1539,62 +1633,141 @@ body {
   
   .impact-stats-section .section-subtitle {
     font-size: 1rem !important;
-  }
-}
-
-@media (max-width: 480px) {
-  .container {
     padding: 0 1rem;
   }
   
+  /* Programs section mobile */
+  .programs-section {
+    padding: 0 1rem;
+  }
+  
+  .programs-vertical-list {
+    padding: 0;
+  }
+  
+  .program-card-vertical {
+    flex-direction: column !important;
+    gap: 1.5rem;
+    padding: 1.5rem 1rem;
+    margin-bottom: 2rem;
+  }
+  
+  .program-card-vertical img {
+    width: 100% !important;
+    height: 35vh !important;
+    max-height: 280px;
+  }
+  
+  .program-card-vertical > div {
+    padding: 1rem 0.5rem;
+  }
+  
+  .program-card-vertical h3 {
+    font-size: 1.4rem !important;
+  }
+  
+  .program-card-vertical p {
+    font-size: 0.95rem !important;
+  }
+  
+  .program-card-vertical ul li {
+    font-size: 0.9rem !important;
+  }
+  
+  /* Partners background mobile */
+  .partners-bg {
+    padding: 2rem 1rem;
+  }
+  
+  .partners-summary-section {
+    padding: 0 1rem;
+  }
+  
+  .partners-summary-section h2 {
+    font-size: 1.8rem !important;
+  }
+  
+  .partners-summary-section p {
+    font-size: 0.95rem !important;
+    padding: 0 0.5rem;
+  }
+  
+  .partners-summary-section > div[style*="display: flex"] {
+    flex-direction: column !important;
+    gap: 0.8rem !important;
+  }
+  
+  .partners-summary-section span {
+    font-size: 0.95rem !important;
+  }
+}
+
+/* Small Mobile Devices - Enhanced */
+@media (max-width: 480px) {
+  .container {
+    padding: 0 0.75rem;
+  }
+  
+  /* Header extra small screens */
   .header-content {
-    padding: 0.75rem 1rem;
-    min-height: 70px;
-    height: 70px;
+    padding: 0.5rem 0.75rem;
+    min-height: 60px;
+    height: 60px;
   }
   
   .logo h1 {
-    font-size: 1rem;
+    font-size: 0.9rem;
+    line-height: 1.2;
   }
   
   .logo .tagline {
-    font-size: 0.65rem;
+    font-size: 0.6rem;
   }
   
+  /* Stats grid small mobile */
   .stats-grid {
     grid-template-columns: 1fr;
+    gap: 1.25rem;
+    padding: 0 0.75rem;
   }
   
   .page-content {
     padding: 1.5rem 0;
   }
   
+  /* Typography small mobile */
   .section-title {
-    font-size: 1.75rem !important;
+    font-size: 1.6rem !important;
     padding: 0 0.5rem;
+    line-height: 1.2;
   }
   
+  /* Hero small mobile */
   .hero {
     height: 50vh;
-    min-height: 350px;
+    min-height: 320px;
   }
   
   .hero-title {
-    font-size: 2rem !important;
+    font-size: 1.75rem !important;
+    line-height: 1.2;
   }
   
   .hero-subtitle {
-    font-size: 1rem !important;
+    font-size: 0.9rem !important;
+    padding: 0 0.75rem;
   }
   
+  /* Features small mobile */
   .full-page-feature {
-    padding: 1.5rem 0.75rem;
+    padding: 1.25rem 0.75rem;
     padding-top: 1.5rem;
+    gap: 1.25rem;
   }
   
   .feature-img-large {
-    height: 30vh;
-    max-height: 250px;
+    height: 32vh;
+    max-height: 240px;
     border-radius: 10px;
   }
   
@@ -1603,19 +1776,27 @@ body {
   }
   
   .feature-desc h3 {
-    font-size: 1.4rem;
+    font-size: 1.3rem;
+    line-height: 1.3;
   }
   
   .feature-desc p {
     font-size: 0.9rem;
+    line-height: 1.65;
   }
   
+  .feature-desc ul li {
+    font-size: 0.85rem;
+    line-height: 1.6;
+  }
+  
+  /* Stats card small mobile */
   .stat-card {
     padding: 1.5rem 1rem;
   }
   
   .stat-number {
-    font-size: 2rem;
+    font-size: 2.2rem;
     min-height: 2.5rem;
   }
   
@@ -1623,19 +1804,26 @@ body {
     font-size: 2.5rem;
   }
   
-  .home-centered {
-    font-size: 1.1rem !important;
-  }
-  
-  .section-description {
+  .stat-label {
     font-size: 0.95rem;
   }
   
-  .intro-section {
-    padding: 1.5rem 0;
+  /* Section content small mobile */
+  .home-centered {
+    font-size: 1.05rem !important;
+    line-height: 1.5;
   }
   
-  /* Contact form */
+  .section-description {
+    font-size: 0.9rem;
+    line-height: 1.65;
+  }
+  
+  .intro-section {
+    padding: 1.5rem 0.75rem;
+  }
+  
+  /* Contact form small mobile */
   .contact-form {
     padding: 1.25rem;
   }
@@ -1643,7 +1831,7 @@ body {
   .form-group input,
   .form-group textarea {
     padding: 0.85rem;
-    font-size: 0.95rem;
+    font-size: 16px;
   }
   
   .submit-btn {
@@ -1655,55 +1843,133 @@ body {
     padding: 1.25rem;
   }
   
-  /* Footer */
+  .info-card h3 {
+    font-size: 1.1rem;
+  }
+  
+  .info-card p {
+    font-size: 0.9rem;
+  }
+  
+  /* Footer small mobile */
   .footer {
     padding: 2rem 0 1rem;
   }
   
+  .footer-content {
+    padding: 0 0.75rem;
+  }
+  
   .footer-section h3 {
-    font-size: 1.1rem;
+    font-size: 1.05rem;
   }
   
   .footer-section p,
   .footer-section li {
-    font-size: 0.9rem;
+    font-size: 0.85rem;
   }
   
-  /* Partner logos */
+  /* Partner logos small mobile */
   .partner-logo-tape {
-    height: 45px;
-    padding: 0.35rem 0.75rem;
+    height: 42px;
+    padding: 0.3rem 0.6rem;
   }
   
   .partner-logo-name {
-    font-size: 0.7rem;
-    min-width: 90px;
+    font-size: 0.65rem;
+    min-width: 85px;
+    max-width: 140px;
+  }
+  
+  .partners-tape {
+    padding: 0.75rem 0;
   }
   
   .partners-bg {
-    padding: 2rem 0;
+    padding: 1.75rem 0.75rem;
   }
   
   .partners-summary-section h2 {
-    font-size: 1.75rem !important;
+    font-size: 1.6rem !important;
   }
   
   .partners-summary-section p {
     font-size: 0.9rem !important;
-    padding: 0 1rem;
+    padding: 0 0.5rem;
   }
   
-  /* About page */
+  .partners-summary-section > div[style*="display: flex"] {
+    gap: 0.6rem !important;
+  }
+  
+  .partners-summary-section span {
+    font-size: 0.85rem !important;
+  }
+  
+  /* About page small mobile */
   .about-hero-animated {
-    padding: 1rem;
+    padding: 1rem 0.75rem;
   }
   
   .about-hero-animated h1 {
-    font-size: 2rem !important;
+    font-size: 1.75rem !important;
+    line-height: 1.3;
   }
   
   .about-hero-animated p {
-    font-size: 0.95rem !important;
+    font-size: 0.9rem !important;
+    line-height: 1.65;
+  }
+  
+  .about-cards-grid,
+  .team-grid {
+    padding: 0 0.75rem;
+  }
+  
+  /* Program cards small mobile */
+  .program-card-vertical {
+    padding: 1.25rem 0.75rem;
+    margin-bottom: 1.5rem;
+  }
+  
+  .program-card-vertical img {
+    height: 30vh !important;
+    max-height: 240px;
+  }
+  
+  .program-card-vertical h3 {
+    font-size: 1.25rem !important;
+  }
+  
+  .program-card-vertical p {
+    font-size: 0.9rem !important;
+  }
+  
+  .program-card-vertical ul li {
+    font-size: 0.85rem !important;
+  }
+  
+  /* Mobile navigation improvements */
+  .mobile-nav {
+    padding: 2rem 1rem;
+  }
+  
+  .mobile-nav .nav-item {
+    font-size: 1.3rem;
+    padding: 0.75rem 1.5rem;
+  }
+  
+  /* Improve touch targets for mobile */
+  button,
+  a,
+  .nav-item,
+  .submit-btn {
+    min-height: 44px; /* Apple's recommended minimum touch target */
+  }
+  
+  /* Optimize images for mobile */
+  img {
+    image-rendering: -webkit-optimize-contrast;
   }
 }
 

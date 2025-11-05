@@ -1,5 +1,6 @@
 import { useState, useEffect } from 'react';
 import './styles-professional.css';
+import './mobile-optimizations.css';
 import './programs-vertical-animate.css';
 import './about-hero-animated.css';
 import { animateOnScroll, initScrollAnimations, animateProgramsVerticalOnScroll } from './scrollAnimation-professional';
@@ -66,6 +67,26 @@ function App() {
       // Scroll to top when changing page
       window.scrollTo({ top: 0, behavior: 'smooth' });
   }, [currentPage]);
+
+  // Lock body scroll when mobile menu is open
+  useEffect(() => {
+    if (isMenuOpen) {
+      document.body.style.overflow = 'hidden';
+      document.body.style.position = 'fixed';
+      document.body.style.width = '100%';
+    } else {
+      document.body.style.overflow = '';
+      document.body.style.position = '';
+      document.body.style.width = '';
+    }
+    
+    // Cleanup on unmount
+    return () => {
+      document.body.style.overflow = '';
+      document.body.style.position = '';
+      document.body.style.width = '';
+    };
+  }, [isMenuOpen]);
 
   // Auto-advance carousel every 4 seconds (slower)
   useEffect(() => {
@@ -653,30 +674,38 @@ function App() {
             </nav>
             {/* Hamburger icon for mobile */}
             <button 
-              className="mobile-menu-btn"
-              aria-label="Open menu"
+              className={`mobile-menu-btn ${isMenuOpen ? 'active' : ''}`}
+              aria-label={isMenuOpen ? "Close menu" : "Open menu"}
               onClick={() => setIsMenuOpen(!isMenuOpen)}
               style={{ background: 'none', border: 'none', padding: '0.5rem', marginLeft: '1rem', cursor: 'pointer', display: 'flex', flexDirection: 'column', justifyContent: 'center', alignItems: 'center' }}
             >
-              <span style={{ width: '28px', height: '4px', background: '#2d5a27', margin: '5px 0', borderRadius: '2px' }}></span>
-              <span style={{ width: '28px', height: '4px', background: '#2d5a27', margin: '5px 0', borderRadius: '2px' }}></span>
-              <span style={{ width: '28px', height: '4px', background: '#2d5a27', margin: '5px 0', borderRadius: '2px' }}></span>
+              <span style={{ width: '28px', height: '3px', background: '#fff', margin: '4px 0', borderRadius: '2px', transition: 'all 0.3s cubic-bezier(0.4, 0, 0.2, 1)' }}></span>
+              <span style={{ width: '28px', height: '3px', background: '#fff', margin: '4px 0', borderRadius: '2px', transition: 'all 0.3s cubic-bezier(0.4, 0, 0.2, 1)' }}></span>
+              <span style={{ width: '28px', height: '3px', background: '#fff', margin: '4px 0', borderRadius: '2px', transition: 'all 0.3s cubic-bezier(0.4, 0, 0.2, 1)' }}></span>
             </button>
             {/* Mobile menu overlay */}
             {isMenuOpen && (
-              <nav className="mobile-nav" style={{ position: 'fixed', top: 0, left: 0, width: '100vw', height: '100vh', background: 'rgba(45,90,39,0.97)', zIndex: 2000, display: 'flex', flexDirection: 'column', alignItems: 'center', justifyContent: 'center' }}>
+              <nav className="mobile-nav" style={{ position: 'fixed', top: 0, left: 0, width: '100vw', height: '100vh', background: 'rgba(45,90,39,0.98)', backdropFilter: 'blur(20px)', zIndex: 2000, display: 'flex', flexDirection: 'column', alignItems: 'center', justifyContent: 'center', animation: 'fadeIn 0.3s ease-out' }}>
                 {navigationItems.map((item) => (
                   <button
                     key={item.id}
                     className={`nav-item${currentPage === item.id ? ' active' : ''}`}
-                    style={{ color: 'white', fontSize: '1.5rem', margin: '1rem 0', background: 'none', border: 'none' }}
+                    style={{ color: 'white', fontSize: '1.4rem', margin: '0.75rem 0', background: currentPage === item.id ? 'rgba(255,255,255,0.15)' : 'none', border: 'none', padding: '0.75rem 2rem', borderRadius: '12px', transition: 'all 0.3s ease', cursor: 'pointer', display: 'flex', alignItems: 'center', gap: '0.75rem' }}
                     onClick={() => { setCurrentPage(item.id); setIsMenuOpen(false); }}
                   >
-                    <span className="nav-icon">{item.icon}</span>
-                    <span className="nav-label">{item.label}</span>
+                    <span className="nav-icon" style={{ fontSize: '1.5rem' }}>{item.icon}</span>
+                    <span className="nav-label" style={{ fontWeight: '600' }}>{item.label}</span>
                   </button>
                 ))}
-                <button onClick={() => setIsMenuOpen(false)} style={{ marginTop: '2rem', color: '#fff', fontSize: '1.2rem', background: 'none', border: '2px solid #fff', borderRadius: '8px', padding: '0.7rem 2rem' }}>Close</button>
+                <button 
+                  onClick={() => setIsMenuOpen(false)} 
+                  aria-label="Close menu"
+                  style={{ marginTop: '2rem', color: '#fff', fontSize: '1rem', background: 'none', border: '2px solid #fff', borderRadius: '12px', padding: '0.75rem 2.5rem', cursor: 'pointer', transition: 'all 0.3s ease', fontWeight: '600' }}
+                  onMouseOver={(e) => e.target.style.background = 'rgba(255,255,255,0.1)'}
+                  onMouseOut={(e) => e.target.style.background = 'none'}
+                >
+                  ✕ Close Menu
+                </button>
               </nav>
             )}
           </div>

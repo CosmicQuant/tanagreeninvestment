@@ -1,0 +1,544 @@
+/* Mobile-First Optimizations for Tana Green Investments */
+
+/* ============================================
+   MOBILE PERFORMANCE OPTIMIZATIONS
+   ============================================ */
+
+/* Optimize font loading for mobile */
+@media (max-width: 768px) {
+  body {
+    -webkit-font-smoothing: antialiased;
+    -moz-osx-font-smoothing: grayscale;
+    text-rendering: optimizeLegibility;
+  }
+}
+
+/* Improve scrolling performance on mobile */
+* {
+  -webkit-overflow-scrolling: touch;
+}
+
+/* Prevent text size adjustment on orientation change */
+html {
+  -webkit-text-size-adjust: 100%;
+  -moz-text-size-adjust: 100%;
+  -ms-text-size-adjust: 100%;
+  text-size-adjust: 100%;
+}
+
+/* ============================================
+   TOUCH INTERACTIONS & GESTURES
+   ============================================ */
+
+/* Optimize tap highlighting */
+* {
+  -webkit-tap-highlight-color: rgba(111, 175, 111, 0.15);
+  tap-highlight-color: rgba(111, 175, 111, 0.15);
+}
+
+/* Remove 300ms click delay on mobile */
+a, button, input, select, textarea {
+  touch-action: manipulation;
+}
+
+/* Improve button and link touch targets */
+@media (max-width: 768px) {
+  button,
+  a,
+  .nav-item,
+  .submit-btn,
+  .stat-card,
+  .partner-card,
+  .info-card {
+    min-height: 44px;
+    min-width: 44px;
+  }
+  
+  /* Increase spacing between interactive elements */
+  .nav-item + .nav-item,
+  .stat-card + .stat-card,
+  .partner-card + .partner-card {
+    margin-top: 0.5rem;
+  }
+}
+
+/* ============================================
+   MOBILE TYPOGRAPHY ENHANCEMENTS
+   ============================================ */
+
+@media (max-width: 768px) {
+  /* Improve readability with optimal line length */
+  p, li {
+    max-width: 100%;
+    line-height: 1.7;
+  }
+  
+  /* Prevent orphans and widows */
+  p {
+    orphans: 3;
+    widows: 3;
+  }
+  
+  /* Optimize heading sizes for mobile */
+  h1 { font-size: clamp(1.75rem, 5vw, 2.5rem); }
+  h2 { font-size: clamp(1.5rem, 4vw, 2rem); }
+  h3 { font-size: clamp(1.25rem, 3.5vw, 1.75rem); }
+  h4 { font-size: clamp(1.1rem, 3vw, 1.5rem); }
+}
+
+/* ============================================
+   MOBILE IMAGE OPTIMIZATIONS
+   ============================================ */
+
+@media (max-width: 768px) {
+  img {
+    /* Optimize image rendering */
+    image-rendering: -webkit-optimize-contrast;
+    image-rendering: crisp-edges;
+    
+    /* Prevent layout shift */
+    height: auto;
+    
+    /* Lazy loading hint */
+    content-visibility: auto;
+  }
+  
+  /* Optimize hero images for mobile */
+  .hero {
+    background-size: cover;
+    background-position: center center;
+    background-attachment: scroll; /* Better performance than fixed */
+  }
+  
+  /* Optimize feature images */
+  .feature-img-large,
+  .program-card-vertical img {
+    object-fit: cover;
+    object-position: center;
+    will-change: auto; /* Disable will-change after animation */
+  }
+}
+
+/* ============================================
+   MOBILE LAYOUT IMPROVEMENTS
+   ============================================ */
+
+@media (max-width: 768px) {
+  /* Add safe areas for notched devices */
+  .header,
+  .footer {
+    padding-left: env(safe-area-inset-left);
+    padding-right: env(safe-area-inset-right);
+  }
+  
+  .header {
+    padding-top: env(safe-area-inset-top);
+  }
+  
+  .footer {
+    padding-bottom: env(safe-area-inset-bottom);
+  }
+  
+  /* Improve container spacing */
+  .container {
+    padding-left: max(1rem, env(safe-area-inset-left));
+    padding-right: max(1rem, env(safe-area-inset-right));
+  }
+  
+  /* Optimize vertical spacing */
+  section + section {
+    margin-top: 2rem;
+  }
+}
+
+/* ============================================
+   MOBILE FORM OPTIMIZATIONS
+   ============================================ */
+
+@media (max-width: 768px) {
+  /* Prevent zoom on input focus (iOS) */
+  input[type="text"],
+  input[type="email"],
+  input[type="tel"],
+  textarea,
+  select {
+    font-size: 16px !important; /* Minimum 16px to prevent zoom */
+  }
+  
+  /* Improve form field appearance on mobile */
+  input,
+  textarea {
+    -webkit-appearance: none;
+    appearance: none;
+    border-radius: 8px;
+  }
+  
+  /* Optimize textarea sizing */
+  textarea {
+    resize: vertical;
+    min-height: 120px;
+  }
+  
+  /* Better button styling for mobile */
+  button,
+  .submit-btn {
+    -webkit-appearance: none;
+    appearance: none;
+    border-radius: 12px;
+    font-size: 16px;
+    padding: 1rem 1.5rem;
+  }
+}
+
+/* ============================================
+   MOBILE ANIMATION OPTIMIZATIONS
+   ============================================ */
+
+@media (max-width: 768px) {
+  /* Reduce motion for better performance */
+  @media (prefers-reduced-motion: no-preference) {
+    /* Use transform instead of position for animations */
+    .animate-on-scroll,
+    .carousel-fade,
+    .stat-card.animated {
+      transform: translateZ(0); /* Force GPU acceleration */
+      backface-visibility: hidden;
+    }
+    
+    /* Optimize carousel transitions */
+    .carousel-hero {
+      transition: background-image 0.8s ease-in-out;
+    }
+  }
+  
+  /* Disable complex animations on low-end devices */
+  @media (prefers-reduced-motion: reduce) {
+    *,
+    *::before,
+    *::after {
+      animation-duration: 0.01ms !important;
+      animation-iteration-count: 1 !important;
+      transition-duration: 0.01ms !important;
+    }
+  }
+}
+
+/* ============================================
+   MOBILE NAVIGATION ENHANCEMENTS
+   ============================================ */
+
+@media (max-width: 768px) {
+  /* Improve mobile menu */
+  .mobile-nav {
+    position: fixed;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    z-index: 9999;
+    overflow-y: auto;
+    -webkit-overflow-scrolling: touch;
+    animation: fadeIn 0.3s ease-out;
+  }
+  
+  @keyframes fadeIn {
+    from {
+      opacity: 0;
+      transform: scale(0.95);
+    }
+    to {
+      opacity: 1;
+      transform: scale(1);
+    }
+  }
+  
+  /* Add scroll indicator for mobile menu */
+  .mobile-nav::after {
+    content: '';
+    position: sticky;
+    bottom: 0;
+    left: 0;
+    right: 0;
+    height: 20px;
+    background: linear-gradient(to top, rgba(45, 90, 39, 0.8), transparent);
+    pointer-events: none;
+  }
+  
+  /* Hamburger menu animation */
+  .mobile-menu-btn span {
+    display: block;
+    transition: all 0.3s cubic-bezier(0.4, 0, 0.2, 1);
+  }
+  
+  .mobile-menu-btn.active span:nth-child(1) {
+    transform: translateY(11px) rotate(45deg);
+  }
+  
+  .mobile-menu-btn.active span:nth-child(2) {
+    opacity: 0;
+    transform: translateX(-20px);
+  }
+  
+  .mobile-menu-btn.active span:nth-child(3) {
+    transform: translateY(-11px) rotate(-45deg);
+  }
+  
+  /* Mobile nav item animations */
+  .mobile-nav .nav-item {
+    animation: slideInFromRight 0.4s ease-out backwards;
+  }
+  
+  .mobile-nav .nav-item:nth-child(1) { animation-delay: 0.1s; }
+  .mobile-nav .nav-item:nth-child(2) { animation-delay: 0.15s; }
+  .mobile-nav .nav-item:nth-child(3) { animation-delay: 0.2s; }
+  .mobile-nav .nav-item:nth-child(4) { animation-delay: 0.25s; }
+  .mobile-nav .nav-item:nth-child(5) { animation-delay: 0.3s; }
+  
+  @keyframes slideInFromRight {
+    from {
+      opacity: 0;
+      transform: translateX(30px);
+    }
+    to {
+      opacity: 1;
+      transform: translateX(0);
+    }
+  }
+}
+
+/* ============================================
+   MOBILE CARDS & GRIDS
+   ============================================ */
+
+@media (max-width: 768px) {
+  /* Improve card shadows on mobile */
+  .stat-card,
+  .partner-card,
+  .info-card,
+  .about-card,
+  .team-card {
+    box-shadow: 0 2px 12px rgba(0, 0, 0, 0.08);
+  }
+  
+  /* Optimize grid gaps */
+  .stats-grid,
+  .partners-grid,
+  .about-cards-grid,
+  .team-grid {
+    gap: 1.25rem;
+  }
+  
+  /* Improve card padding */
+  .stat-card,
+  .partner-card,
+  .about-card,
+  .team-card {
+    padding: 1.5rem 1.25rem;
+  }
+}
+
+/* ============================================
+   MOBILE CAROUSEL IMPROVEMENTS
+   ============================================ */
+
+@media (max-width: 768px) {
+  /* Add swipe indicators */
+  .carousel-hero::after {
+    content: '';
+    position: absolute;
+    bottom: 2rem;
+    left: 50%;
+    transform: translateX(-50%);
+    width: 60px;
+    height: 4px;
+    background: rgba(255, 255, 255, 0.5);
+    border-radius: 2px;
+  }
+  
+  /* Optimize hero subtitle positioning */
+  .hero-subtitle {
+    text-shadow: 0 2px 12px rgba(0, 0, 0, 0.5);
+    max-width: 90%;
+    margin: 0 auto;
+  }
+}
+
+/* ============================================
+   MOBILE ACCESSIBILITY IMPROVEMENTS
+   ============================================ */
+
+@media (max-width: 768px) {
+  /* Improve focus indicators */
+  *:focus-visible {
+    outline: 3px solid rgba(111, 175, 111, 0.8);
+    outline-offset: 3px;
+  }
+  
+  /* Better skip link for mobile */
+  .skip-to-content {
+    position: absolute;
+    top: -100px;
+    left: 0;
+    background: var(--primary-green);
+    color: white;
+    padding: 1rem;
+    text-decoration: none;
+    z-index: 10000;
+  }
+  
+  .skip-to-content:focus {
+    top: 0;
+  }
+}
+
+/* ============================================
+   MOBILE LOADING STATES
+   ============================================ */
+
+@media (max-width: 768px) {
+  /* Loading skeleton for images */
+  img:not([src]) {
+    background: linear-gradient(90deg, #f0f0f0 25%, #e0e0e0 50%, #f0f0f0 75%);
+    background-size: 200% 100%;
+    animation: loading 1.5s infinite;
+  }
+  
+  @keyframes loading {
+    0% { background-position: 200% 0; }
+    100% { background-position: -200% 0; }
+  }
+}
+
+/* ============================================
+   MOBILE PRINT STYLES
+   ============================================ */
+
+@media print {
+  /* Hide navigation on print */
+  .header,
+  .footer,
+  .mobile-menu-btn,
+  .mobile-nav {
+    display: none !important;
+  }
+  
+  /* Optimize content for print */
+  body {
+    font-size: 12pt;
+    line-height: 1.5;
+  }
+  
+  .hero {
+    page-break-after: avoid;
+  }
+  
+  .stat-card,
+  .partner-card {
+    page-break-inside: avoid;
+  }
+}
+
+/* ============================================
+   MOBILE DARK MODE SUPPORT
+   ============================================ */
+
+@media (max-width: 768px) and (prefers-color-scheme: dark) {
+  /* Optional: Add dark mode support for mobile */
+  body {
+    background: #1a1a1a;
+    color: #f0f0f0;
+  }
+  
+  .header {
+    background: rgba(45, 90, 39, 0.98);
+  }
+  
+  .stat-card,
+  .partner-card,
+  .info-card,
+  .about-card,
+  .team-card {
+    background: #2a2a2a;
+    color: #f0f0f0;
+    box-shadow: 0 2px 12px rgba(0, 0, 0, 0.5);
+  }
+}
+
+/* ============================================
+   LANDSCAPE ORIENTATION OPTIMIZATIONS
+   ============================================ */
+
+@media (max-width: 768px) and (orientation: landscape) {
+  /* Adjust hero height for landscape */
+  .hero {
+    height: 80vh;
+    min-height: 400px;
+  }
+  
+  /* Optimize navigation for landscape */
+  .mobile-nav {
+    flex-direction: row;
+    flex-wrap: wrap;
+    justify-content: center;
+    align-items: center;
+    padding: 2rem;
+  }
+  
+  .mobile-nav .nav-item {
+    font-size: 1.2rem;
+    margin: 0.5rem;
+  }
+}
+
+/* ============================================
+   VERY SMALL SCREENS (< 360px)
+   ============================================ */
+
+@media (max-width: 360px) {
+  .logo h1 {
+    font-size: 0.85rem;
+  }
+  
+  .logo .tagline {
+    font-size: 0.55rem;
+  }
+  
+  .hero-title {
+    font-size: 1.5rem !important;
+  }
+  
+  .section-title {
+    font-size: 1.4rem !important;
+  }
+  
+  .stat-number {
+    font-size: 2rem;
+  }
+}
+
+/* ============================================
+   PROGRESSIVE ENHANCEMENT
+   ============================================ */
+
+/* Modern mobile browsers with CSS Grid support */
+@supports (display: grid) {
+  @media (max-width: 768px) {
+    .stats-grid,
+    .partners-grid,
+    .team-grid {
+      display: grid;
+      grid-template-columns: 1fr;
+      gap: 1.25rem;
+    }
+  }
+}
+
+/* Modern mobile browsers with Flexbox gap support */
+@supports (gap: 1rem) {
+  @media (max-width: 768px) {
+    .about-cards-grid,
+    .partners-summary-section > div {
+      gap: 1rem;
+    }
+  }
+}
