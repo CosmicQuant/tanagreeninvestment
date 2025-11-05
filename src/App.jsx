@@ -685,7 +685,7 @@ function App() {
             </button>
             {/* Mobile menu overlay */}
             {isMenuOpen && (
-              <nav className="mobile-nav" style={{ position: 'fixed', top: 0, left: 0, width: '100vw', height: '100vh', background: 'rgba(45,90,39,0.98)', backdropFilter: 'blur(20px)', zIndex: 2000, display: 'flex', flexDirection: 'column', alignItems: 'center', justifyContent: 'center', animation: 'fadeIn 0.3s ease-out' }}>
+              <nav className="mobile-nav" style={{ position: 'fixed', top: 0, left: 0, width: '100vw', height: '100vh', background: 'rgba(45,90,39,0.75)', backdropFilter: 'blur(10px)', zIndex: 2000, display: 'flex', flexDirection: 'column', alignItems: 'center', justifyContent: 'center', animation: 'fadeIn 0.3s ease-out' }}>
                 {navigationItems.map((item) => (
                   <button
                     key={item.id}
