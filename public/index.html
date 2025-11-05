@@ -1,17 +1,30 @@
-<!DOCTYPE html>
+﻿<!DOCTYPE html>
 <html lang="en">
 <head>
   <meta charset="UTF-8" />
-  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=5.0, user-scalable=yes" />
   <title>Tana Green Investments</title>
   <link rel="icon" href="/assets/favicon.ico" />
+  <style>
+    html {
+      -webkit-text-size-adjust: 100%;
+      -ms-text-size-adjust: 100%;
+      text-size-adjust: 100%;
+    }
+    body {
+      margin: 0;
+      padding: 0;
+      -webkit-font-smoothing: antialiased;
+      -moz-osx-font-smoothing: grayscale;
+    }
+  </style>
 </head>
 <body>
   <!-- Netlify static fallback form for detection -->
   <form name="contact" method="POST" data-netlify="true" netlify-honeypot="bot-field" style="display:none">
     <input type="hidden" name="form-name" value="contact" />
     <p hidden>
-      <label>Don’t fill this out if you’re human: <input name="bot-field" /></label>
+      <label>Don't fill this out if you're human: <input name="bot-field" /></label>
     </p>
     <input type="text" name="name" />
     <input type="email" name="email" />
@@ -20,5 +33,6 @@
     <button type="submit">Send Message</button>
   </form>
   <div id="root"></div>
+  <script type="module" src="/src/main.jsx"></script>
 </body>
 </html>
