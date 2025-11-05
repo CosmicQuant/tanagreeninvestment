@@ -9,6 +9,13 @@
   }
 }
 
+/* Ensure hamburger is hidden on desktop/laptop screens */
+@media (min-width: 769px) {
+  .mobile-menu-btn {
+    display: none !important;
+  }
+}
+
 .mobile-menu-btn {
   display: none;
   background: none;
