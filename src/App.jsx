@@ -44,7 +44,7 @@ function App() {
       subtitle: 'NURTURING NATURE, EMPOWERING COMMUNITIES',
     },
     {
-    url: '/assets/women.jpg', // Local women.jpg image
+      url: '/assets/women.jpg', // Local women.jpg image
       subtitle: 'EMPOWERING COMMUNITIES FOR GREEN GROWTH',
     },
     {
@@ -52,7 +52,7 @@ function App() {
       subtitle: 'SUSTAINABLE LAND DEVELOPMENT & SMART AGRICULTURE',
     },
     {
-    url: '/assets/tanariver.jpg', // Local tanariver.jpg image
+      url: '/assets/tanariver.jpg', // Local tanariver.jpg image
       subtitle: 'CONSERVING KENYA’S NATURAL HERITAGE',
     },
   ];
@@ -64,8 +64,8 @@ function App() {
         animateProgramsVerticalOnScroll();
       }, 300);
     }
-      // Scroll to top when changing page
-      window.scrollTo({ top: 0, behavior: 'smooth' });
+    // Scroll to top when changing page
+    window.scrollTo({ top: 0, behavior: 'smooth' });
   }, [currentPage]);
 
   // Lock body scroll when mobile menu is open
@@ -79,7 +79,7 @@ function App() {
       document.body.style.position = '';
       document.body.style.width = '';
     }
-    
+
     // Cleanup on unmount
     return () => {
       document.body.style.overflow = '';
@@ -148,7 +148,7 @@ function App() {
                   counter.textContent = Math.floor(current).toLocaleString() + '+';
                 } else {
                   counter.textContent = Math.floor(current) + '+';
-                }  
+                }
               }, 50); // Slower animation - update every 50ms
             });
           }
@@ -165,7 +165,7 @@ function App() {
     } else {
       setAnimatedStats(false);
     }
-    
+
     if (currentPage === 'home') {
       setTimeout(() => {
         animateOnScroll();
@@ -207,120 +207,120 @@ function App() {
 
   const renderPageContent = () => {
     const partnerTapeItems = [
-  { file: 'GARISSA-COUNTY.png', name: 'Garissa County' },
-  { file: 'Ishaqbini-Conservancy.png', name: 'Ishaqbini Conservancy' },
-  { file: 'Kenya-Forest-Services.jpg', name: 'Kenya Forest Services' },
-  { file: 'Kwale-County.png', name: 'Kwale County' },
-  { file: 'Ministry-Of-Environment.png', name: 'Ministry of Environment' },
-  { file: 'NCDF-Ijara.png', name: 'NCDF Ijara' },
-  { file: 'UNEP.png', name: 'UNEP' }
+      { file: 'GARISSA-COUNTY.png', name: 'Garissa County' },
+      { file: 'Ishaqbini-Conservancy.png', name: 'Ishaqbini Conservancy' },
+      { file: 'Kenya-Forest-Services.jpg', name: 'Kenya Forest Services' },
+      { file: 'Kwale-County.png', name: 'Kwale County' },
+      { file: 'Ministry-Of-Environment.png', name: 'Ministry of Environment' },
+      { file: 'NCDF-Ijara.png', name: 'NCDF Ijara' },
+      { file: 'UNEP.png', name: 'UNEP' }
     ];
     switch (currentPage) {
       case 'home':
         return (
-        <div className="page-content">
-          <section className="intro-section">
-            <h2 className="section-title carousel-title-animate">Nature Conservation & Climate Management</h2>
-            <p className="section-subtitle home-centered">
-              Building a sustainable future through conservation, community empowerment, and climate action.
-            </p>
-            <p className="section-description">
-              Our programs combine community engagement, strategic partnerships, and sustainable land development 
-              to safeguard biodiversity and create green economic opportunities.
-            </p>
-          </section>
-          <section className="features-vertical">
-            <div className="features-viewport">
-              <div className="feature-row full-page-feature">
-                <img src="/assets/boniforest.png" alt="Forest Conservation & Protection" className="feature-img-large" />
-                <div className="feature-desc">
-                  <h3>Forest Conservation & Protection</h3>
-                  <p>
-                    We are committed to safeguarding Kenya’s natural forests. We actively counter deforestation through continuous awareness campaigns and capacity-building programs for local communities, schools, and youth groups. By collaborating with enforcement agencies like the <b>Kenya Forest Service (KFS)</b>, county environmental departments, and local administrations, we strengthen forest protection measures, reduce illegal logging, and promote sustainable land-use practices. Furthermore, we work closely with established conservancies, such as <b>Ishaqbini Conservancy in Masalani</b>, to implement habitat restoration and wildlife protection awareness campaigns, creating vital synergies for biodiversity conservation.
-                  </p>
-                </div>
-              </div>
-              <div className="feature-row full-page-feature">
-                <img src="https://images.unsplash.com/photo-1542601906990-b4d3fb778b09?auto=format&fit=crop&w=1200&q=80" alt="Afforestation & Reforestation" className="feature-img-large" />
-                <div className="feature-desc">
-                  <h3>Afforestation & Reforestation</h3>
-                  <p>
-                    Our large-scale afforestation and reforestation projects target critical ecological zones. This includes planting trees in <b>Tana River riparian zones</b> to prevent soil erosion and restore natural water cycles, as well as in the <b>Boni Forest</b> and coastal areas, which are vital biodiversity hotspots. We also implement structured urban greening programs in public spaces across <b>Garissa, Masalani, Ijara, and Kwale Counties</b> to enhance air quality, create shade, and beautify urban environments.
-                  </p>
-                </div>
-              </div>
-              <div className="feature-row full-page-feature">
-                <img src="/assets/women.jpg" alt="Women-Centered Empowerment" className="feature-img-large" />
-                <div className="feature-desc">
-                  <h3>Women-Centered Empowerment</h3>
-                  <p>
-                    Recognizing the pivotal role of women in environmental conservation, we support female-headed households in <b>Garissa (Waberi Ward)</b> and <b>Masalani Municipality</b>. We achieve this by supplying seedlings, providing training in tree nursery management and tree planting techniques, and purchasing tree-based products (e.g., fruits, seedlings, timber substitutes) to provide sustainable income and reduce reliance on destructive activities like charcoal burning.
-                  </p>
-                </div>
-              </div>
-              <div className="feature-row full-page-feature">
-                <img src="https://images.unsplash.com/photo-1574323347407-f5e1ad6d020b?auto=format&fit=crop&w=1200&q=80" alt="Sustainable Land Development & Agriculture" className="feature-img-large" />
-                <div className="feature-desc">
-                  <h3>Sustainable Land Development & Agriculture</h3>
-                  <p>
-                    We take a holistic approach to land management and food security. We strategically acquire and develop land for <b>sustainable agricultural ventures</b>, including tree farming, horticulture, and organic farming, as well as for eco-friendly land resale, ensuring parcels are managed to support forest regeneration and sustainable land-use policies. Complementing this, we promote <b>mixed and rotational farming practices</b> within <b>Tana River County</b> to enhance soil fertility, improve water retention, increase crop yields, and create climate-smart farming models that improve food security.
-                  </p>
-                </div>
-              </div>
-            </div>
-          </section>
-          <section className="impact-stats-section">
-            <div className="container">
-              <h2 className="section-title">Our Impact in Numbers</h2>
-              <p className="section-subtitle">Measurable results from our conservation efforts across Kenya</p>
-              <div className="stats-grid">
-                {impactStats.map((stat, index) => (
-                  <div 
-                    key={index} 
-                    className={`stat-card ${animatedStats ? 'animated' : ''}`}
-                    style={{ animationDelay: `${index * 0.2}s` }}
-                  >
-                    <div className="stat-icon">{stat.icon}</div>
-                    <div className="stat-number counter" data-target={stat.number.replace(/[^0-9]/g, '')}>0</div>
-                    <div className="stat-label">{stat.label}</div>
+          <div className="page-content">
+            <section className="intro-section">
+              <h2 className="section-title carousel-title-animate">Nature Conservation & Climate Management</h2>
+              <p className="section-subtitle home-centered">
+                Building a sustainable future through conservation, community empowerment, and climate action.
+              </p>
+              <p className="section-description">
+                Our programs combine community engagement, strategic partnerships, and sustainable land development
+                to safeguard biodiversity and create green economic opportunities.
+              </p>
+            </section>
+            <section className="features-vertical">
+              <div className="features-viewport">
+                <div className="feature-row full-page-feature">
+                  <img src="/assets/boniforest.png" alt="Forest Conservation & Protection" className="feature-img-large" />
+                  <div className="feature-desc">
+                    <h3>Forest Conservation & Protection</h3>
+                    <p>
+                      We are committed to safeguarding Kenya’s natural forests. We actively counter deforestation through continuous awareness campaigns and capacity-building programs for local communities, schools, and youth groups. By collaborating with enforcement agencies like the <b>Kenya Forest Service (KFS)</b>, county environmental departments, and local administrations, we strengthen forest protection measures, reduce illegal logging, and promote sustainable land-use practices. Furthermore, we work closely with established conservancies, such as <b>Ishaqbini Conservancy in Masalani</b>, to implement habitat restoration and wildlife protection awareness campaigns, creating vital synergies for biodiversity conservation.
+                    </p>
                   </div>
-                ))}
-              </div>
-            </div>
-          </section>
-          <div className="partners-bg">
-            <div className="partners-content">
-              <section className="partners-summary-section" style={{ textAlign: 'center', marginTop: '3rem', position: 'relative', zIndex: 3 }}>
-                <h2 className="section-title carousel-title-animate" style={{ textAlign: 'center', margin: '0 auto', fontWeight: 700, fontSize: '2.5rem' }}>Our Partners</h2>
-                <div style={{ height: '2.5rem' }}></div>
-                <p className="section-description" style={{ textAlign: 'center', margin: '0 auto', maxWidth: '600px' }}>
-                  We work together to protect forests, restore habitats, and empower local communities through strategic partnerships.
-                </p>
-                <div style={{ marginTop: '2rem', display: 'flex', justifyContent: 'center', gap: '2.5rem', flexWrap: 'wrap' }}>
-                  <span style={{ fontSize: '1.25rem', fontWeight: '600' }}>🏛️ Government Partners</span>
-                  <span style={{ fontSize: '1.25rem', fontWeight: '600' }}>🦓 Conservation Partners</span>
-                  <span style={{ fontSize: '1.25rem', fontWeight: '600' }}>👥 Community Partners</span>
-                  <span style={{ fontSize: '1.25rem', fontWeight: '600' }}>🌍 International Partners</span>
                 </div>
-                {/* Partner logos tape below partners section, matching home page */}
-                <div className="partners-tape">
-                  <div className="tape-track">
-                    {partnerTapeItems.map((item, idx) => (
-                      <div key={item.file} className="partner-logo-tape-item">
+                <div className="feature-row full-page-feature">
+                  <img src="https://images.unsplash.com/photo-1542601906990-b4d3fb778b09?auto=format&fit=crop&w=1200&q=80" alt="Afforestation & Reforestation" className="feature-img-large" />
+                  <div className="feature-desc">
+                    <h3>Afforestation & Reforestation</h3>
+                    <p>
+                      Our large-scale afforestation and reforestation projects target critical ecological zones. This includes planting trees in <b>Tana River riparian zones</b> to prevent soil erosion and restore natural water cycles, as well as in the <b>Boni Forest</b> and coastal areas, which are vital biodiversity hotspots. We also implement structured urban greening programs in public spaces across <b>Garissa, Masalani, Ijara, and Kwale Counties</b> to enhance air quality, create shade, and beautify urban environments.
+                    </p>
+                  </div>
+                </div>
+                <div className="feature-row full-page-feature">
+                  <img src="/assets/women.jpg" alt="Women-Centered Empowerment" className="feature-img-large" />
+                  <div className="feature-desc">
+                    <h3>Women-Centered Empowerment</h3>
+                    <p>
+                      Recognizing the pivotal role of women in environmental conservation, we support female-headed households in <b>Garissa (Waberi Ward)</b> and <b>Masalani Municipality</b>. We achieve this by supplying seedlings, providing training in tree nursery management and tree planting techniques, and purchasing tree-based products (e.g., fruits, seedlings, timber substitutes) to provide sustainable income and reduce reliance on destructive activities like charcoal burning.
+                    </p>
+                  </div>
+                </div>
+                <div className="feature-row full-page-feature">
+                  <img src="https://images.unsplash.com/photo-1574323347407-f5e1ad6d020b?auto=format&fit=crop&w=1200&q=80" alt="Sustainable Land Development & Agriculture" className="feature-img-large" />
+                  <div className="feature-desc">
+                    <h3>Sustainable Land Development & Agriculture</h3>
+                    <p>
+                      We take a holistic approach to land management and food security. We strategically acquire and develop land for <b>sustainable agricultural ventures</b>, including tree farming, horticulture, and organic farming, as well as for eco-friendly land resale, ensuring parcels are managed to support forest regeneration and sustainable land-use policies. Complementing this, we promote <b>mixed and rotational farming practices</b> within <b>Tana River County</b> to enhance soil fertility, improve water retention, increase crop yields, and create climate-smart farming models that improve food security.
+                    </p>
+                  </div>
+                </div>
+              </div>
+            </section>
+            <section className="impact-stats-section">
+              <div className="container">
+                <h2 className="section-title">Our Impact in Numbers</h2>
+                <p className="section-subtitle">Measurable results from our conservation efforts across Kenya</p>
+                <div className="stats-grid">
+                  {impactStats.map((stat, index) => (
+                    <div
+                      key={index}
+                      className={`stat-card ${animatedStats ? 'animated' : ''}`}
+                      style={{ animationDelay: `${index * 0.2}s` }}
+                    >
+                      <div className="stat-icon">{stat.icon}</div>
+                      <div className="stat-number counter" data-target={stat.number.replace(/[^0-9]/g, '')}>0</div>
+                      <div className="stat-label">{stat.label}</div>
+                    </div>
+                  ))}
+                </div>
+              </div>
+            </section>
+            <div className="partners-bg">
+              <div className="partners-content">
+                <section className="partners-summary-section" style={{ textAlign: 'center', marginTop: '3rem', position: 'relative', zIndex: 3 }}>
+                  <h2 className="section-title carousel-title-animate" style={{ textAlign: 'center', margin: '0 auto', fontWeight: 700, fontSize: '2.5rem' }}>Our Partners</h2>
+                  <div style={{ height: '2.5rem' }}></div>
+                  <p className="section-description" style={{ textAlign: 'center', margin: '0 auto', maxWidth: '600px' }}>
+                    We work together to protect forests, restore habitats, and empower local communities through strategic partnerships.
+                  </p>
+                  <div style={{ marginTop: '2rem', display: 'flex', justifyContent: 'center', gap: '2.5rem', flexWrap: 'wrap' }}>
+                    <span style={{ fontSize: '1.25rem', fontWeight: '600' }}>🏛️ Government Partners</span>
+                    <span style={{ fontSize: '1.25rem', fontWeight: '600' }}>🦓 Conservation Partners</span>
+                    <span style={{ fontSize: '1.25rem', fontWeight: '600' }}>👥 Community Partners</span>
+                    <span style={{ fontSize: '1.25rem', fontWeight: '600' }}>🌍 International Partners</span>
+                  </div>
+                  {/* Partner logos tape below partners section, matching home page */}
+                  <div className="partners-tape">
+                    <div className="tape-track">
+                      {partnerTapeItems.map((item, idx) => (
+                        <div key={item.file} className="partner-logo-tape-item">
                           <img
                             src={`/assets/${item.file}`}
-                          alt={item.file === 'Ministry Of Environment.png' ? 'Ministry of Environment' : item.name}
-                          className="partner-logo-tape"
-                        />
-                        <div className="partner-logo-name">{item.name}</div>
-                      </div>
-                    ))}
+                            alt={item.file === 'Ministry Of Environment.png' ? 'Ministry of Environment' : item.name}
+                            className="partner-logo-tape"
+                          />
+                          <div className="partner-logo-name">{item.name}</div>
+                        </div>
+                      ))}
+                    </div>
                   </div>
-                </div>
-              </section>
+                </section>
+              </div>
             </div>
           </div>
-        </div>
         );
       case 'programs':
         const flagshipPrograms = [
@@ -416,10 +416,10 @@ function App() {
                     key={program.title}
                     id={
                       idx === 0 ? 'forest' :
-                      idx === 1 ? 'afforestation' :
-                      idx === 2 ? 'land' :
-                      idx === 3 ? 'women' :
-                      undefined
+                        idx === 1 ? 'afforestation' :
+                          idx === 2 ? 'land' :
+                            idx === 3 ? 'women' :
+                              undefined
                     }
                     className={`program-card-vertical animate-on-scroll${idx % 2 === 0 ? ' left-img' : ' right-img'}`}
                     style={{
@@ -459,41 +459,41 @@ function App() {
         return (
           <div className="page-content">
             <div>
-              <div className="about-cards-grid" style={{display: 'flex', gap: '2rem', justifyContent: 'center', flexWrap: 'wrap', marginBottom: '3rem'}}>
-                <div className="about-card" style={{background: 'white', borderRadius: '16px', boxShadow: '0 2px 16px rgba(45,90,39,0.07)', padding: '2rem', minWidth: '260px', maxWidth: '340px', textAlign: 'center'}}>
-                  <h3 style={{color: '#2d5a27'}}>🌱 Mission</h3>
+              <div className="about-cards-grid" style={{ display: 'flex', gap: '2rem', justifyContent: 'center', flexWrap: 'wrap', marginBottom: '3rem' }}>
+                <div className="about-card" style={{ background: 'white', borderRadius: '16px', boxShadow: '0 2px 16px rgba(45,90,39,0.07)', padding: '2rem', minWidth: '260px', maxWidth: '340px', textAlign: 'center' }}>
+                  <h3 style={{ color: '#2d5a27' }}>🌱 Mission</h3>
                   <p>To safeguard biodiversity, empower communities, and build a sustainable future through conservation and climate action.</p>
                 </div>
-                <div className="about-card" style={{background: 'white', borderRadius: '16px', boxShadow: '0 2px 16px rgba(45,90,39,0.07)', padding: '2rem', minWidth: '260px', maxWidth: '340px', textAlign: 'center'}}>
-                  <h3 style={{color: '#2d5a27'}}>🌍 Vision</h3>
+                <div className="about-card" style={{ background: 'white', borderRadius: '16px', boxShadow: '0 2px 16px rgba(45,90,39,0.07)', padding: '2rem', minWidth: '260px', maxWidth: '340px', textAlign: 'center' }}>
+                  <h3 style={{ color: '#2d5a27' }}>🌍 Vision</h3>
                   <p>To be a leader in nature conservation, climate management, and green economic development in Kenya and beyond.</p>
                 </div>
-                <div className="about-card" style={{background: 'white', borderRadius: '16px', boxShadow: '0 2px 16px rgba(45,90,39,0.07)', padding: '2rem', minWidth: '260px', maxWidth: '340px', textAlign: 'center'}}>
-                  <h3 style={{color: '#2d5a27'}}>⏳ Values</h3>
+                <div className="about-card" style={{ background: 'white', borderRadius: '16px', boxShadow: '0 2px 16px rgba(45,90,39,0.07)', padding: '2rem', minWidth: '260px', maxWidth: '340px', textAlign: 'center' }}>
+                  <h3 style={{ color: '#2d5a27' }}>⏳ Values</h3>
                   <p>Integrity, sustainability, inclusivity, and innovation guide everything we do.</p>
                 </div>
               </div>
-              <h2 className="section-title" style={{marginTop: '3rem', textAlign: 'center'}}>Meet the Team</h2>
-              <div className="team-grid" style={{display: 'flex', gap: '2rem', justifyContent: 'center', flexWrap: 'wrap', marginTop: '2rem', textAlign: 'center'}}>
-                <div className="team-card" style={{background: 'white', borderRadius: '16px', boxShadow: '0 2px 16px rgba(45,90,39,0.07)', padding: '2rem', minWidth: '220px', maxWidth: '260px', textAlign: 'center'}}>
-                    <img src={"/assets/Yusuf Ahmed.jpeg"} alt="Yusuf Ahmed" style={{width: '90px', height: '90px', borderRadius: '50%', objectFit: 'cover', marginBottom: '1rem', border: '3px solid #6faf6f'}} />
-                  <h4 style={{color: '#2d5a27', marginBottom: '0.5rem'}}>Yusuf Ahmed</h4>
-                  <p style={{fontWeight: 600, color: '#666'}}>Founder & CEO</p>
+              <h2 className="section-title" style={{ marginTop: '3rem', textAlign: 'center' }}>Meet the Team</h2>
+              <div className="team-grid" style={{ display: 'flex', gap: '2rem', justifyContent: 'center', flexWrap: 'wrap', marginTop: '2rem', textAlign: 'center' }}>
+                <div className="team-card" style={{ background: 'white', borderRadius: '16px', boxShadow: '0 2px 16px rgba(45,90,39,0.07)', padding: '2rem', minWidth: '220px', maxWidth: '260px', textAlign: 'center' }}>
+                  <img src={"/assets/Yusuf Ahmed.jpeg"} alt="Yusuf Ahmed" style={{ width: '90px', height: '90px', borderRadius: '50%', objectFit: 'cover', marginBottom: '1rem', border: '3px solid #6faf6f' }} />
+                  <h4 style={{ color: '#2d5a27', marginBottom: '0.5rem' }}>Yusuf Ahmed</h4>
+                  <p style={{ fontWeight: 600, color: '#666' }}>Founder & CEO</p>
                 </div>
-                <div className="team-card" style={{background: 'white', borderRadius: '16px', boxShadow: '0 2px 16px rgba(45,90,39,0.07)', padding: '2rem', minWidth: '220px', maxWidth: '260px', textAlign: 'center'}}>
-                    <img src={"/assets/Mohamed Ismail.jpeg"} alt="Mohammed Ismail" style={{width: '90px', height: '90px', borderRadius: '50%', objectFit: 'cover', marginBottom: '1rem', border: '3px solid #6faf6f'}} />
-                  <h4 style={{color: '#2d5a27', marginBottom: '0.5rem'}}>Mohammed Ismail</h4>
-                  <p style={{fontWeight: 600, color: '#666'}}>Operations Manager</p>
+                <div className="team-card" style={{ background: 'white', borderRadius: '16px', boxShadow: '0 2px 16px rgba(45,90,39,0.07)', padding: '2rem', minWidth: '220px', maxWidth: '260px', textAlign: 'center' }}>
+                  <img src={"/assets/Mohamed Ismail.jpeg"} alt="Mohammed Ismail" style={{ width: '90px', height: '90px', borderRadius: '50%', objectFit: 'cover', marginBottom: '1rem', border: '3px solid #6faf6f' }} />
+                  <h4 style={{ color: '#2d5a27', marginBottom: '0.5rem' }}>Mohammed Ismail</h4>
+                  <p style={{ fontWeight: 600, color: '#666' }}>Operations Manager</p>
                 </div>
-                <div className="team-card" style={{background: 'white', borderRadius: '16px', boxShadow: '0 2px 16px rgba(45,90,39,0.07)', padding: '2rem', minWidth: '220px', maxWidth: '260px', textAlign: 'center'}}>
-                  <img src="https://ui-avatars.com/api/?name=Mohammed+Ahmed&background=6faf6f&color=fff&size=90" alt="Mohammed Ahmed" style={{width: '90px', height: '90px', borderRadius: '50%', objectFit: 'cover', marginBottom: '1rem', border: '3px solid #6faf6f'}} />
-                  <h4 style={{color: '#2d5a27', marginBottom: '0.5rem'}}>Mohammed Ahmed</h4>
-                  <p style={{fontWeight: 600, color: '#666'}}>Finance Manager</p>
+                <div className="team-card" style={{ background: 'white', borderRadius: '16px', boxShadow: '0 2px 16px rgba(45,90,39,0.07)', padding: '2rem', minWidth: '220px', maxWidth: '260px', textAlign: 'center' }}>
+                  <img src="https://ui-avatars.com/api/?name=Mohammed+Ahmed&background=6faf6f&color=fff&size=90" alt="Mohammed Ahmed" style={{ width: '90px', height: '90px', borderRadius: '50%', objectFit: 'cover', marginBottom: '1rem', border: '3px solid #6faf6f' }} />
+                  <h4 style={{ color: '#2d5a27', marginBottom: '0.5rem' }}>Mohammed Ahmed</h4>
+                  <p style={{ fontWeight: 600, color: '#666' }}>Finance Manager</p>
                 </div>
-                <div className="team-card" style={{background: 'white', borderRadius: '16px', boxShadow: '0 2px 16px rgba(45,90,39,0.07)', padding: '2rem', minWidth: '220px', maxWidth: '260px', textAlign: 'center'}}>
-                  <img src="https://ui-avatars.com/api/?name=Ali+Hassan&background=6faf6f&color=fff&size=90" alt="Ali Hassan" style={{width: '90px', height: '90px', borderRadius: '50%', objectFit: 'cover', marginBottom: '1rem', border: '3px solid #6faf6f'}} />
-                  <h4 style={{color: '#2d5a27', marginBottom: '0.5rem'}}>Ali Hassan</h4>
-                  <p style={{fontWeight: 600, color: '#666'}}>Human Resource & Relations Manager</p>
+                <div className="team-card" style={{ background: 'white', borderRadius: '16px', boxShadow: '0 2px 16px rgba(45,90,39,0.07)', padding: '2rem', minWidth: '220px', maxWidth: '260px', textAlign: 'center' }}>
+                  <img src="https://ui-avatars.com/api/?name=Ali+Hassan&background=6faf6f&color=fff&size=90" alt="Ali Hassan" style={{ width: '90px', height: '90px', borderRadius: '50%', objectFit: 'cover', marginBottom: '1rem', border: '3px solid #6faf6f' }} />
+                  <h4 style={{ color: '#2d5a27', marginBottom: '0.5rem' }}>Ali Hassan</h4>
+                  <p style={{ fontWeight: 600, color: '#666' }}>Human Resource & Relations Manager</p>
                 </div>
               </div>
             </div>
@@ -503,7 +503,7 @@ function App() {
         return (
           <div className="page-content">
             <section className="partners-section">
-                <h2 className="section-title" style={{ textAlign: 'center', margin: '0 auto 2.5rem auto', fontWeight: 700, fontSize: '2.5rem', borderBottom: 'none', boxShadow: 'none' }}>Our Partners</h2>
+              <h2 className="section-title" style={{ textAlign: 'center', margin: '0 auto 2.5rem auto', fontWeight: 700, fontSize: '2.5rem', borderBottom: 'none', boxShadow: 'none' }}>Our Partners</h2>
               <p className="section-description">
                 We work together to protect forests, restore habitats, and empower local communities through strategic partnerships.
               </p>
@@ -549,18 +549,18 @@ function App() {
             {/* Partner logos tape below partners section */}
             <div className="partners-tape">
               <div className="tape-track">
-                    {[
-                      { file: 'GARISSA-COUNTY.png', name: 'Garissa County' },
-                      { file: 'Ishaqbini-Conservancy.png', name: 'Ishaqbini Conservancy' },
-                      { file: 'Kenya-Forest-Services.jpg', name: 'Kenya Forest Services' },
-                      { file: 'Kwale-County.png', name: 'Kwale County' },
-                      { file: 'Ministry-Of-Environment.png', name: 'Ministry Of Environment' },
-                      { file: 'NCDF-Ijara.png', name: 'NCDF Ijara' },
-                      { file: 'UNEP.png', name: 'UNEP' }
-                    ].map((item, idx) => (
+                {[
+                  { file: 'GARISSA-COUNTY.png', name: 'Garissa County' },
+                  { file: 'Ishaqbini-Conservancy.png', name: 'Ishaqbini Conservancy' },
+                  { file: 'Kenya-Forest-Services.jpg', name: 'Kenya Forest Services' },
+                  { file: 'Kwale-County.png', name: 'Kwale County' },
+                  { file: 'Ministry-Of-Environment.png', name: 'Ministry Of Environment' },
+                  { file: 'NCDF-Ijara.png', name: 'NCDF Ijara' },
+                  { file: 'UNEP.png', name: 'UNEP' }
+                ].map((item, idx) => (
                   <div key={item.file} className="partner-logo-tape-item">
-                        <img
-                          src={`/assets/${item.file}`}
+                    <img
+                      src={`/assets/${item.file}`}
                       alt={item.name}
                       className="partner-logo-tape"
                     />
@@ -580,7 +580,7 @@ function App() {
               <p className="section-description">
                 Ready to join our mission? Contact us to learn more about our programs or explore partnership opportunities.
               </p>
-              
+
               <div className="contact-container">
                 <div className="contact-form-container">
                   <form className="contact-form" name="contact" method="POST" data-netlify="true" onSubmit={(e) => {
@@ -614,13 +614,13 @@ function App() {
                     </div>
                     <button type="submit" className="submit-btn">Send Message</button>
                     {showSuccess && (
-                      <div style={{marginTop: '1.5rem', color: '#2d5a27', fontWeight: 600, fontSize: '1.1rem', background: '#e8f5e8', padding: '1rem', borderRadius: '8px', textAlign: 'center'}}>
+                      <div style={{ marginTop: '1.5rem', color: '#2d5a27', fontWeight: 600, fontSize: '1.1rem', background: '#e8f5e8', padding: '1rem', borderRadius: '8px', textAlign: 'center' }}>
                         Thank you for contacting us! We have received your message and will get back to you soon.
                       </div>
                     )}
                   </form>
                 </div>
-                
+
                 <div className="contact-info">
                   <div className="info-card">
                     <h3>📧 Email Us</h3>
@@ -655,10 +655,10 @@ function App() {
         <div className="container">
           <div className="header-content">
             <div className="logo">
-              <h1 style={{cursor: 'pointer'}} onClick={() => setCurrentPage('home')}>Tana Green Investments</h1>
+              <h1 style={{ cursor: 'pointer' }} onClick={() => setCurrentPage('home')}>Tana Green Investments</h1>
               <span className="tagline">Nurturing Nature, Empowering Communities</span>
             </div>
-            
+
             {/* Desktop navigation */}
             <nav className="nav nav-centered desktop-nav">
               {navigationItems.map((item) => (
@@ -673,7 +673,7 @@ function App() {
               ))}
             </nav>
             {/* Hamburger icon for mobile */}
-            <button 
+            <button
               className={`mobile-menu-btn ${isMenuOpen ? 'active' : ''}`}
               aria-label={isMenuOpen ? "Close menu" : "Open menu"}
               onClick={() => setIsMenuOpen(!isMenuOpen)}
@@ -697,8 +697,8 @@ function App() {
                     <span className="nav-label" style={{ fontWeight: '600' }}>{item.label}</span>
                   </button>
                 ))}
-                <button 
-                  onClick={() => setIsMenuOpen(false)} 
+                <button
+                  onClick={() => setIsMenuOpen(false)}
                   aria-label="Close menu"
                   style={{ marginTop: '2rem', color: '#fff', fontSize: '1rem', background: 'none', border: '2px solid #fff', borderRadius: '12px', padding: '0.75rem 2.5rem', cursor: 'pointer', transition: 'all 0.3s ease', fontWeight: '600' }}
                   onMouseOver={(e) => e.target.style.background = 'rgba(255,255,255,0.1)'}
@@ -714,7 +714,7 @@ function App() {
 
       <main className="main">
         {currentPage === 'home' ? (
-          <section className="hero carousel-hero" style={{backgroundImage: `url(${carouselImages[carouselIndex].url})`}}>
+          <section className="hero carousel-hero" style={{ backgroundImage: `url(${carouselImages[carouselIndex].url})` }}>
             <div className="hero-overlay">
               <div className="container">
                 <div className="hero-content">
@@ -726,12 +726,12 @@ function App() {
             </div>
           </section>
         ) : (
-          <section className="hero" style={{backgroundImage: `url(${heroImages[currentPage]})`}}>
+          <section className="hero" style={{ backgroundImage: `url(${heroImages[currentPage]})` }}>
             {currentPage === 'about' ? (
               <div className="container">
-                <div className="hero-content about-hero-animated" style={{textAlign: 'center', maxWidth: '800px', margin: '4rem auto'}}>
-                  <h1 className="hero-title" style={{marginBottom: '1.5rem', color: '#fff', fontWeight: 800, fontSize: '2.7rem'}}>About Us</h1>
-                  <p style={{fontSize: '1.1rem', color: '#fff', fontWeight: 500}}>
+                <div className="hero-content about-hero-animated" style={{ textAlign: 'center', maxWidth: '800px', margin: '4rem auto' }}>
+                  <h1 className="hero-title" style={{ marginBottom: '1.5rem', color: '#fff', fontWeight: 800, fontSize: '2.7rem' }}>About Us</h1>
+                  <p style={{ fontSize: '1.1rem', color: '#fff', fontWeight: 500 }}>
                     Tana Green Investments is dedicated to protecting Kenya’s natural heritage and promoting sustainable land use as a driver of climate resilience. We combine community engagement, strategic partnerships, and innovative programs to create lasting impact for people and nature.
                   </p>
                 </div>
@@ -757,7 +757,7 @@ function App() {
 
       <footer className="footer">
         <div className="container">
-          <div className="footer-content" style={{display: 'grid', gridTemplateColumns: 'repeat(auto-fit, minmax(220px, 1fr))', gap: '2rem', textAlign: 'left'}}>
+          <div className="footer-content" style={{ display: 'grid', gridTemplateColumns: 'repeat(auto-fit, minmax(220px, 1fr))', gap: '2rem', textAlign: 'left' }}>
             {/* Who We Are */}
             <div className="footer-section">
               <h3>Tana Green Investments</h3>
@@ -766,7 +766,7 @@ function App() {
             {/* What We Do */}
             <div className="footer-section">
               <h3>What We Do</h3>
-              <ul style={{listStyle: 'none', padding: 0}}>
+              <ul style={{ listStyle: 'none', padding: 0 }}>
                 <li><a href="#forest" onClick={() => setCurrentPage('programs')}>🌳 Forest Conservation & Protection</a></li>
                 <li><a href="#afforestation" onClick={() => setCurrentPage('programs')}>🌱 Afforestation & Reforestation</a></li>
                 <li><a href="#women" onClick={() => setCurrentPage('programs')}>👩 Women-Centered Empowerment</a></li>
@@ -776,7 +776,7 @@ function App() {
             {/* Quick Links */}
             <div className="footer-section">
               <h3>Quick Links</h3>
-              <ul style={{listStyle: 'none', padding: 0}}>
+              <ul style={{ listStyle: 'none', padding: 0 }}>
                 <li><a href="#" onClick={() => setCurrentPage('about')}>About Us</a></li>
                 <li><a href="#" onClick={() => setCurrentPage('programs')}>Our Programs</a></li>
                 <li><a href="#" onClick={() => setCurrentPage('partners')}>Our Partners</a></li>
@@ -786,20 +786,20 @@ function App() {
             {/* Contact Info */}
             <div className="footer-section">
               <h3>Contact Info</h3>
-              <ul style={{listStyle: 'none', padding: 0}}>
+              <ul style={{ listStyle: 'none', padding: 0 }}>
                 <li>📍 Harambee Road, Garissa, Kenya</li>
                 <li>📧 <a href="mailto:info@tanagreen.co.ke">info@tanagreen.co.ke</a></li>
                 <li>📱 +254 701 789550</li>
               </ul>
             </div>
           </div>
-          <div className="footer-bottom" style={{textAlign: 'center', paddingTop: '2rem', borderTop: '1px solid rgba(255,255,255,0.2)', opacity: 0.9}}>
+          <div className="footer-bottom" style={{ textAlign: 'center', paddingTop: '2rem', borderTop: '1px solid rgba(255,255,255,0.2)', opacity: 0.9 }}>
             <p>&copy; 2025 Tana Green Investments Limited. All rights reserved.</p>
           </div>
         </div>
       </footer>
-          </div>
-        );
+    </div>
+  );
 }
 
 export default App;

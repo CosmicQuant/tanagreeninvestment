@@ -3,6 +3,7 @@
   .desktop-nav {
     display: none !important;
   }
+
   .mobile-menu-btn {
     display: flex !important;
   }
@@ -45,6 +46,7 @@
 
 /* Mobile-specific touch optimizations */
 @media (hover: none) and (pointer: coarse) {
+
   /* Increase touch target sizes */
   .nav-item,
   button,
@@ -52,24 +54,26 @@
     min-height: 44px;
     min-width: 44px;
   }
-  
+
   /* Remove hover effects on touch devices */
   .nav-item:hover::before {
     display: none;
   }
-  
+
   /* Optimize animations for mobile performance */
   * {
     -webkit-tap-highlight-color: rgba(111, 175, 111, 0.2);
   }
 }
+
 /* Ensure partners section text is visible on background image */
 .partners-bg .section-title,
 .partners-bg .section-description,
 .partners-bg .partners-summary-section span {
   color: #fff !important;
-  text-shadow: 0 2px 12px rgba(0,0,0,0.25);
+  text-shadow: 0 2px 12px rgba(0, 0, 0, 0.25);
 }
+
 /* Partners Section Background */
 .partners-bg {
   position: relative;
@@ -88,13 +92,16 @@
   box-shadow: none;
   background-color: transparent;
 }
+
 .partners-bg-overlay {
   display: none;
 }
+
 .partners-content {
   position: relative;
   z-index: 3;
 }
+
 /* Partners Tape Animation */
 /* Partners Tape Animation */
 .partners-tape {
@@ -104,6 +111,7 @@
   padding: 1rem 0;
   background: transparent;
 }
+
 .tape-track {
   display: flex;
   gap: 2.5rem;
@@ -111,6 +119,7 @@
   align-items: center;
   white-space: nowrap;
 }
+
 .partner-logo-tape-item {
   display: flex;
   flex-direction: column;
@@ -118,15 +127,17 @@
   justify-content: center;
   min-width: 120px;
 }
+
 .partner-logo-tape {
   height: 60px;
   width: auto;
   object-fit: contain;
-  filter: drop-shadow(0 2px 8px rgba(0,0,0,0.08));
+  filter: drop-shadow(0 2px 8px rgba(0, 0, 0, 0.08));
   background: white;
   border-radius: 8px;
   padding: 0.5rem 1rem;
 }
+
 .partner-logo-name {
   font-size: 0.85rem;
   color: #2d5a27;
@@ -134,35 +145,44 @@
   margin-top: 0.5rem;
   text-align: center;
   white-space: normal;
-  background: rgba(255,255,255,0.85);
+  background: rgba(255, 255, 255, 0.85);
   border-radius: 6px;
   padding: 0.2rem 0.5rem;
-  box-shadow: 0 2px 8px rgba(0,0,0,0.04);
+  box-shadow: 0 2px 8px rgba(0, 0, 0, 0.04);
   min-width: 120px;
   max-width: 180px;
   word-break: break-word;
   overflow: visible;
   text-overflow: unset;
 }
+
 .tape-track {
   display: flex;
   gap: 2.5rem;
   animation: tape-scroll 30s linear infinite;
   align-items: center;
 }
+
 .partner-logo-tape {
   height: 60px;
   width: auto;
   object-fit: contain;
-  filter: drop-shadow(0 2px 8px rgba(0,0,0,0.08));
+  filter: drop-shadow(0 2px 8px rgba(0, 0, 0, 0.08));
   background: white;
   border-radius: 8px;
   padding: 0.5rem 1rem;
 }
+
 @keyframes tape-scroll {
-  0% { transform: translateX(100%); }
-  100% { transform: translateX(-100%); }
+  0% {
+    transform: translateX(100%);
+  }
+
+  100% {
+    transform: translateX(-100%);
+  }
 }
+
 /* Carousel fade transition for hero image and subtitle */
 .carousel-hero {
   transition: background-image 1.2s cubic-bezier(0.4, 0, 0.2, 1);
@@ -178,11 +198,13 @@
     opacity: 0;
     transform: translateY(20px);
   }
+
   to {
     opacity: 1;
     transform: translateY(0);
   }
 }
+
 /* Tana Green Investments - Professional CSS with Advanced Animations */
 
 /* Reset and Base Styles */
@@ -255,6 +277,7 @@ body {
     transform: translateY(-100%);
     opacity: 0;
   }
+
   to {
     transform: translateY(0);
     opacity: 1;
@@ -292,6 +315,7 @@ body {
   from {
     filter: drop-shadow(0 0 5px rgba(111, 175, 111, 0.3));
   }
+
   to {
     filter: drop-shadow(0 0 15px rgba(111, 175, 111, 0.6));
   }
@@ -426,6 +450,7 @@ body {
     opacity: 0;
     transform: scale(1.1);
   }
+
   to {
     opacity: 1;
     transform: scale(1);
@@ -456,6 +481,7 @@ body {
     opacity: 0;
     transform: translateY(50px) scale(0.9);
   }
+
   to {
     opacity: 1;
     transform: translateY(0) scale(1);
@@ -475,8 +501,15 @@ body {
 }
 
 @keyframes titleShine {
-  0%, 100% { background-position: 0% 50%; }
-  50% { background-position: 100% 50%; }
+
+  0%,
+  100% {
+    background-position: 0% 50%;
+  }
+
+  50% {
+    background-position: 100% 50%;
+  }
 }
 
 .hero-subtitle {
@@ -520,8 +553,13 @@ body {
 }
 
 @keyframes floatingCircle {
-  0% { transform: rotate(0deg); }
-  100% { transform: rotate(360deg); }
+  0% {
+    transform: rotate(0deg);
+  }
+
+  100% {
+    transform: rotate(360deg);
+  }
 }
 
 .section-title {
@@ -548,8 +586,13 @@ body {
 }
 
 @keyframes expandLine {
-  from { width: 0; }
-  to { width: 100px; }
+  from {
+    width: 0;
+  }
+
+  to {
+    width: 100px;
+  }
 }
 
 .home-centered {
@@ -577,7 +620,8 @@ body {
 /* Professional Page-Flip Animation Container */
 .features-vertical {
   position: relative;
-  height: 500vh; /* Increase height for more scroll space */
+  height: 500vh;
+  /* Increase height for more scroll space */
   background: linear-gradient(180deg, #ffffff 0%, #f8fdf8 100%);
 }
 
@@ -682,6 +726,7 @@ body {
     opacity: 0;
     transform: translateX(50px);
   }
+
   to {
     opacity: 1;
     transform: translateX(0);
@@ -813,6 +858,7 @@ body {
     opacity: 0;
     transform: translateY(30px) scale(0.95);
   }
+
   to {
     opacity: 1;
     transform: translateY(0) scale(1);
@@ -860,6 +906,7 @@ body {
     transform: translateY(30px);
     opacity: 0;
   }
+
   100% {
     transform: translateY(0);
     opacity: 1;
@@ -893,6 +940,7 @@ body {
   margin: 0 auto;
   max-width: 700px;
 }
+
 .mission-text {
   text-align: center;
 }
@@ -937,8 +985,15 @@ body {
 }
 
 @keyframes iconBounce {
-  0%, 100% { transform: translateY(0); }
-  50% { transform: translateY(-5px); }
+
+  0%,
+  100% {
+    transform: translateY(0);
+  }
+
+  50% {
+    transform: translateY(-5px);
+  }
 }
 
 .program-header {
@@ -970,11 +1025,14 @@ body {
 }
 
 @keyframes iconPulse {
-  0%, 100% { 
+
+  0%,
+  100% {
     transform: scale(1);
     filter: drop-shadow(0 0 5px rgba(111, 175, 111, 0.3));
   }
-  50% { 
+
+  50% {
     transform: scale(1.05);
     filter: drop-shadow(0 0 15px rgba(111, 175, 111, 0.6));
   }
@@ -1005,6 +1063,7 @@ body {
     transform: scale(0.5);
     opacity: 0;
   }
+
   to {
     transform: scale(1);
     opacity: 1;
@@ -1051,8 +1110,13 @@ body {
 }
 
 @keyframes formBackground {
-  0% { transform: rotate(0deg); }
-  100% { transform: rotate(360deg); }
+  0% {
+    transform: rotate(0deg);
+  }
+
+  100% {
+    transform: rotate(360deg);
+  }
 }
 
 .form-group {
@@ -1174,8 +1238,13 @@ body {
 }
 
 @keyframes footerBackground {
-  0% { transform: rotate(0deg); }
-  100% { transform: rotate(360deg); }
+  0% {
+    transform: rotate(0deg);
+  }
+
+  100% {
+    transform: rotate(360deg);
+  }
 }
 
 .footer-content {
@@ -1269,6 +1338,7 @@ body {
     opacity: 0;
     transform: translateY(30px);
   }
+
   to {
     opacity: 1;
     transform: translateY(0);
@@ -1276,8 +1346,13 @@ body {
 }
 
 @keyframes fadeIn {
-  from { opacity: 0; }
-  to { opacity: 1; }
+  from {
+    opacity: 0;
+  }
+
+  to {
+    opacity: 1;
+  }
 }
 
 /* Scroll-triggered animations */
@@ -1293,31 +1368,61 @@ body {
 }
 
 /* Loading animations for delayed content */
-.feature-card:nth-child(1) { animation-delay: 0.1s; }
-.feature-card:nth-child(2) { animation-delay: 0.2s; }
-.feature-card:nth-child(3) { animation-delay: 0.3s; }
-.feature-card:nth-child(4) { animation-delay: 0.4s; }
+.feature-card:nth-child(1) {
+  animation-delay: 0.1s;
+}
 
-.program-card:nth-child(1) { animation-delay: 0.1s; }
-.program-card:nth-child(2) { animation-delay: 0.3s; }
-.program-card:nth-child(3) { animation-delay: 0.5s; }
+.feature-card:nth-child(2) {
+  animation-delay: 0.2s;
+}
 
-.stat-card:nth-child(1) { animation-delay: 0.1s; }
-.stat-card:nth-child(2) { animation-delay: 0.2s; }
-.stat-card:nth-child(3) { animation-delay: 0.3s; }
-.stat-card:nth-child(4) { animation-delay: 0.4s; }
+.feature-card:nth-child(3) {
+  animation-delay: 0.3s;
+}
+
+.feature-card:nth-child(4) {
+  animation-delay: 0.4s;
+}
+
+.program-card:nth-child(1) {
+  animation-delay: 0.1s;
+}
+
+.program-card:nth-child(2) {
+  animation-delay: 0.3s;
+}
+
+.program-card:nth-child(3) {
+  animation-delay: 0.5s;
+}
+
+.stat-card:nth-child(1) {
+  animation-delay: 0.1s;
+}
+
+.stat-card:nth-child(2) {
+  animation-delay: 0.2s;
+}
+
+.stat-card:nth-child(3) {
+  animation-delay: 0.3s;
+}
+
+.stat-card:nth-child(4) {
+  animation-delay: 0.4s;
+}
 
 /* Responsive Design */
 @media (max-width: 1024px) {
   .container {
     padding: 0 1.5rem;
   }
-  
+
   .contact-container {
     grid-template-columns: 1fr;
     gap: 2rem;
   }
-  
+
   .full-page-feature {
     padding: 1.5rem 1rem;
     gap: 1.5rem;
@@ -1327,7 +1432,7 @@ body {
     min-height: 100vh;
     padding-top: 4rem;
   }
-  
+
   .feature-img-large {
     width: 85%;
     max-width: 450px;
@@ -1336,7 +1441,7 @@ body {
     margin-top: 0;
     transform: none !important;
   }
-  
+
   .feature-desc {
     padding-left: 0;
     text-align: center;
@@ -1346,39 +1451,39 @@ body {
     margin-top: 0;
     padding: 1.5rem;
   }
-  
+
   .feature-desc h3 {
     font-size: 1.6rem;
     margin-bottom: 0.8rem;
   }
-  
+
   .feature-desc p {
     font-size: 0.95rem;
     line-height: 1.6;
     max-height: none;
     text-align: left;
   }
-  
+
   /* Partners section */
   .partners-grid {
     grid-template-columns: 1fr;
     gap: 1.5rem;
   }
-  
+
   .partners-bg {
     padding: 3rem 0;
     min-height: auto;
   }
-  
+
   .partners-summary-section h2 {
     font-size: 2rem !important;
   }
-  
-  .partners-summary-section > div[style*="display: flex"] {
+
+  .partners-summary-section>div[style*="display: flex"] {
     flex-direction: column !important;
     gap: 1rem !important;
   }
-  
+
   .partners-summary-section span {
     font-size: 1rem !important;
   }
@@ -1386,6 +1491,7 @@ body {
 
 /* Mobile Responsive Design - Enhanced */
 @media (max-width: 768px) {
+
   /* Header optimizations */
   .header-content {
     min-height: 70px;
@@ -1393,20 +1499,20 @@ body {
     padding: 0.75rem 1rem;
     gap: 0;
   }
-  
+
   .logo h1 {
     font-size: 1rem;
     line-height: 1.3;
   }
-  
+
   .logo .tagline {
     font-size: 0.7rem;
   }
-  
+
   .nav {
     display: none;
   }
-  
+
   /* Hero section optimization */
   .hero {
     height: 55vh;
@@ -1414,24 +1520,24 @@ body {
     background-attachment: scroll;
     background-position: center center;
   }
-  
+
   .hero-title {
     font-size: 2rem !important;
     line-height: 1.2;
     margin-bottom: 1rem;
   }
-  
+
   .hero-subtitle {
     font-size: 1rem !important;
     padding: 0 1rem;
     line-height: 1.5;
   }
-  
+
   .hero-content {
     padding: 1rem;
     max-width: 100%;
   }
-  
+
   /* Features section mobile optimization */
   .full-page-feature {
     flex-direction: column !important;
@@ -1442,7 +1548,7 @@ body {
     padding-top: 2rem;
     padding-bottom: 2rem;
   }
-  
+
   .feature-img-large {
     width: 100%;
     max-width: 100%;
@@ -1452,7 +1558,7 @@ body {
     margin-top: 0;
     border-radius: 12px;
   }
-  
+
   .feature-desc {
     padding: 1.25rem;
     text-align: left;
@@ -1460,26 +1566,26 @@ body {
     margin-top: 0;
     width: 100%;
   }
-  
+
   .feature-desc h3 {
     font-size: 1.5rem;
     margin-bottom: 1rem;
     text-align: center;
     line-height: 1.3;
   }
-  
+
   .feature-desc p {
     font-size: 0.95rem;
     line-height: 1.7;
     text-align: left;
   }
-  
+
   .feature-desc ul {
     font-size: 0.9rem;
     line-height: 1.6;
     padding-left: 1.2rem;
   }
-  
+
   /* Grid layouts mobile optimization */
   .features-grid,
   .programs-grid {
@@ -1487,34 +1593,34 @@ body {
     gap: 1.5rem;
     padding: 0 0.5rem;
   }
-  
+
   /* Stats grid mobile optimization */
   .stats-grid {
     grid-template-columns: 1fr;
     gap: 1.5rem;
     padding: 0 1rem;
   }
-  
+
   .stat-card {
     min-width: 100%;
     max-width: 100%;
     padding: 2rem 1.5rem;
     margin: 0 auto;
   }
-  
+
   .stat-number {
     font-size: 2.5rem;
     margin-bottom: 0.5rem;
   }
-  
+
   .stat-label {
     font-size: 1rem;
   }
-  
+
   .stat-icon {
     font-size: 2.8rem;
   }
-  
+
   /* Other grid layouts */
   .impact-areas,
   .partners-grid,
@@ -1522,7 +1628,7 @@ body {
     grid-template-columns: 1fr;
     padding: 0 1rem;
   }
-  
+
   /* Typography mobile adjustments */
   .section-title {
     font-size: 2rem !important;
@@ -1530,173 +1636,174 @@ body {
     padding: 0 1rem;
     line-height: 1.3;
   }
-  
+
   .section-subtitle,
   .home-centered {
     font-size: 1.2rem !important;
     line-height: 1.5;
     padding: 0 1rem;
   }
-  
+
   .section-description {
     font-size: 1rem;
     padding: 0 1rem;
     line-height: 1.7;
   }
-  
+
   /* Intro section mobile */
   .intro-section {
     padding: 2rem 1rem;
   }
-  
+
   /* Contact page mobile */
   .contact-container {
     gap: 2rem;
     padding: 0 1rem;
   }
-  
+
   .contact-form {
     padding: 1.5rem;
   }
-  
+
   .info-card {
     padding: 1.5rem;
   }
-  
+
   .info-card h3 {
     font-size: 1.2rem;
   }
-  
+
   .form-group input,
   .form-group textarea {
-    font-size: 16px; /* Prevents zoom on iOS */
+    font-size: 16px;
+    /* Prevents zoom on iOS */
   }
-  
+
   /* Footer mobile */
   .footer {
     padding: 3rem 0 1.5rem;
   }
-  
+
   .footer-content {
     grid-template-columns: 1fr;
     gap: 2rem;
     text-align: center;
     padding: 0 1rem;
   }
-  
+
   .footer-section ul {
     text-align: center;
   }
-  
+
   /* About page mobile */
   .about-cards-grid {
     flex-direction: column !important;
     padding: 0 1rem;
   }
-  
+
   .about-card {
     min-width: 100% !important;
     max-width: 100% !important;
   }
-  
+
   .team-grid {
     grid-template-columns: 1fr !important;
     gap: 1.5rem !important;
     padding: 0 1rem;
   }
-  
+
   .team-card {
     min-width: 100% !important;
     max-width: 100% !important;
   }
-  
+
   /* Partner logos mobile */
   .partner-logo-tape {
     height: 50px;
     padding: 0.4rem 0.8rem;
   }
-  
+
   .partner-logo-name {
     font-size: 0.75rem;
     min-width: 100px;
     max-width: 160px;
   }
-  
+
   /* Impact stats section mobile */
   .impact-stats-section {
     padding: 3rem 1rem;
   }
-  
+
   .impact-stats-section .section-title {
     font-size: 2rem !important;
   }
-  
+
   .impact-stats-section .section-subtitle {
     font-size: 1rem !important;
     padding: 0 1rem;
   }
-  
+
   /* Programs section mobile */
   .programs-section {
     padding: 0 1rem;
   }
-  
+
   .programs-vertical-list {
     padding: 0;
   }
-  
+
   .program-card-vertical {
     flex-direction: column !important;
     gap: 1.5rem;
     padding: 1.5rem 1rem;
     margin-bottom: 2rem;
   }
-  
+
   .program-card-vertical img {
     width: 100% !important;
     height: 35vh !important;
     max-height: 280px;
   }
-  
-  .program-card-vertical > div {
+
+  .program-card-vertical>div {
     padding: 1rem 0.5rem;
   }
-  
+
   .program-card-vertical h3 {
     font-size: 1.4rem !important;
   }
-  
+
   .program-card-vertical p {
     font-size: 0.95rem !important;
   }
-  
+
   .program-card-vertical ul li {
     font-size: 0.9rem !important;
   }
-  
+
   /* Partners background mobile */
   .partners-bg {
     padding: 2rem 1rem;
   }
-  
+
   .partners-summary-section {
     padding: 0 1rem;
   }
-  
+
   .partners-summary-section h2 {
     font-size: 1.8rem !important;
   }
-  
+
   .partners-summary-section p {
     font-size: 0.95rem !important;
     padding: 0 0.5rem;
   }
-  
-  .partners-summary-section > div[style*="display: flex"] {
+
+  .partners-summary-section>div[style*="display: flex"] {
     flex-direction: column !important;
     gap: 0.8rem !important;
   }
-  
+
   .partners-summary-section span {
     font-size: 0.95rem !important;
   }
@@ -1707,266 +1814,267 @@ body {
   .container {
     padding: 0 0.75rem;
   }
-  
+
   /* Header extra small screens */
   .header-content {
     padding: 0.5rem 0.75rem;
     min-height: 60px;
     height: 60px;
   }
-  
+
   .logo h1 {
     font-size: 0.9rem;
     line-height: 1.2;
   }
-  
+
   .logo .tagline {
     font-size: 0.6rem;
   }
-  
+
   /* Stats grid small mobile */
   .stats-grid {
     grid-template-columns: 1fr;
     gap: 1.25rem;
     padding: 0 0.75rem;
   }
-  
+
   .page-content {
     padding: 1.5rem 0;
   }
-  
+
   /* Typography small mobile */
   .section-title {
     font-size: 1.6rem !important;
     padding: 0 0.5rem;
     line-height: 1.2;
   }
-  
+
   /* Hero small mobile */
   .hero {
     height: 50vh;
     min-height: 320px;
   }
-  
+
   .hero-title {
     font-size: 1.75rem !important;
     line-height: 1.2;
   }
-  
+
   .hero-subtitle {
     font-size: 0.9rem !important;
     padding: 0 0.75rem;
   }
-  
+
   /* Features small mobile */
   .full-page-feature {
     padding: 1.25rem 0.75rem;
     padding-top: 1.5rem;
     gap: 1.25rem;
   }
-  
+
   .feature-img-large {
     height: 32vh;
     max-height: 240px;
     border-radius: 10px;
   }
-  
+
   .feature-desc {
     padding: 1rem 0.75rem;
   }
-  
+
   .feature-desc h3 {
     font-size: 1.3rem;
     line-height: 1.3;
   }
-  
+
   .feature-desc p {
     font-size: 0.9rem;
     line-height: 1.65;
   }
-  
+
   .feature-desc ul li {
     font-size: 0.85rem;
     line-height: 1.6;
   }
-  
+
   /* Stats card small mobile */
   .stat-card {
     padding: 1.5rem 1rem;
   }
-  
+
   .stat-number {
     font-size: 2.2rem;
     min-height: 2.5rem;
   }
-  
+
   .stat-icon {
     font-size: 2.5rem;
   }
-  
+
   .stat-label {
     font-size: 0.95rem;
   }
-  
+
   /* Section content small mobile */
   .home-centered {
     font-size: 1.05rem !important;
     line-height: 1.5;
   }
-  
+
   .section-description {
     font-size: 0.9rem;
     line-height: 1.65;
   }
-  
+
   .intro-section {
     padding: 1.5rem 0.75rem;
   }
-  
+
   /* Contact form small mobile */
   .contact-form {
     padding: 1.25rem;
   }
-  
+
   .form-group input,
   .form-group textarea {
     padding: 0.85rem;
     font-size: 16px;
   }
-  
+
   .submit-btn {
     padding: 1rem;
     font-size: 1rem;
   }
-  
+
   .info-card {
     padding: 1.25rem;
   }
-  
+
   .info-card h3 {
     font-size: 1.1rem;
   }
-  
+
   .info-card p {
     font-size: 0.9rem;
   }
-  
+
   /* Footer small mobile */
   .footer {
     padding: 2rem 0 1rem;
   }
-  
+
   .footer-content {
     padding: 0 0.75rem;
   }
-  
+
   .footer-section h3 {
     font-size: 1.05rem;
   }
-  
+
   .footer-section p,
   .footer-section li {
     font-size: 0.85rem;
   }
-  
+
   /* Partner logos small mobile */
   .partner-logo-tape {
     height: 42px;
     padding: 0.3rem 0.6rem;
   }
-  
+
   .partner-logo-name {
     font-size: 0.65rem;
     min-width: 85px;
     max-width: 140px;
   }
-  
+
   .partners-tape {
     padding: 0.75rem 0;
   }
-  
+
   .partners-bg {
     padding: 1.75rem 0.75rem;
   }
-  
+
   .partners-summary-section h2 {
     font-size: 1.6rem !important;
   }
-  
+
   .partners-summary-section p {
     font-size: 0.9rem !important;
     padding: 0 0.5rem;
   }
-  
-  .partners-summary-section > div[style*="display: flex"] {
+
+  .partners-summary-section>div[style*="display: flex"] {
     gap: 0.6rem !important;
   }
-  
+
   .partners-summary-section span {
     font-size: 0.85rem !important;
   }
-  
+
   /* About page small mobile */
   .about-hero-animated {
     padding: 1rem 0.75rem;
   }
-  
+
   .about-hero-animated h1 {
     font-size: 1.75rem !important;
     line-height: 1.3;
   }
-  
+
   .about-hero-animated p {
     font-size: 0.9rem !important;
     line-height: 1.65;
   }
-  
+
   .about-cards-grid,
   .team-grid {
     padding: 0 0.75rem;
   }
-  
+
   /* Program cards small mobile */
   .program-card-vertical {
     padding: 1.25rem 0.75rem;
     margin-bottom: 1.5rem;
   }
-  
+
   .program-card-vertical img {
     height: 30vh !important;
     max-height: 240px;
   }
-  
+
   .program-card-vertical h3 {
     font-size: 1.25rem !important;
   }
-  
+
   .program-card-vertical p {
     font-size: 0.9rem !important;
   }
-  
+
   .program-card-vertical ul li {
     font-size: 0.85rem !important;
   }
-  
+
   /* Mobile navigation improvements */
   .mobile-nav {
     padding: 2rem 1rem;
   }
-  
+
   .mobile-nav .nav-item {
     font-size: 1.3rem;
     padding: 0.75rem 1.5rem;
   }
-  
+
   /* Improve touch targets for mobile */
   button,
   a,
   .nav-item,
   .submit-btn {
-    min-height: 44px; /* Apple's recommended minimum touch target */
+    min-height: 44px;
+    /* Apple's recommended minimum touch target */
   }
-  
+
   /* Optimize images for mobile */
   img {
     image-rendering: -webkit-optimize-contrast;
@@ -1975,6 +2083,7 @@ body {
 
 /* Performance optimizations */
 @media (prefers-reduced-motion: reduce) {
+
   *,
   *::before,
   *::after {
@@ -1986,6 +2095,7 @@ body {
 
 /* High contrast mode support */
 @media (prefers-contrast: high) {
+
   .nav-item:hover,
   .nav-item.active {
     border: 2px solid currentColor;
