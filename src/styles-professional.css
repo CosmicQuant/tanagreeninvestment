@@ -10,7 +10,7 @@
 }
 
 .mobile-menu-btn {
-  display: none !important;
+  display: none;
   background: none;
   border: none;
   padding: 0.5rem;
@@ -856,7 +856,9 @@ body {
 .impact-card,
 .partner-card,
 .value-card {
-  background: white;
+  background: white !important;
+  color: #000 !important;
+  color-scheme: light;
   border-radius: var(--border-radius);
   box-shadow: var(--shadow-light);
   border: 1px solid rgba(45, 90, 39, 0.08);
@@ -1102,7 +1104,9 @@ body {
 }
 
 .contact-form {
-  background: white;
+  background: white !important;
+  color: #000 !important;
+  color-scheme: light;
   padding: 2.5rem;
   border-radius: var(--border-radius);
   box-shadow: var(--shadow-medium);
@@ -1141,7 +1145,7 @@ body {
 .form-group label {
   display: block;
   font-weight: 700;
-  color: var(--primary-green);
+  color: var(--primary-green) !important;
   margin-bottom: 0.5rem;
   font-size: 0.9rem;
   text-transform: uppercase;
@@ -1156,7 +1160,9 @@ body {
   border-radius: 12px;
   font-size: 1rem;
   font-family: inherit;
-  background: #f8f9fa;
+  background: #f8f9fa !important;
+  color: #000 !important;
+  color-scheme: light;
   transition: all var(--transition-fast);
   position: relative;
   z-index: 2;
@@ -1216,12 +1222,23 @@ body {
 }
 
 .info-card {
-  background: white;
+  background: white !important;
+  color: #000 !important;
+  color-scheme: light;
   padding: 2rem;
   border-radius: var(--border-radius);
   box-shadow: var(--shadow-light);
   border: 1px solid rgba(45, 90, 39, 0.08);
   transition: all var(--transition-medium);
+}
+
+.info-card h3,
+.info-card p,
+.info-card a,
+.partner-card h3,
+.partner-card ul,
+.partner-card li {
+  color: #000 !important;
 }
 
 .info-card:hover {
@@ -1486,7 +1503,7 @@ body {
   .partners-bg {
     padding: 3rem 0;
     min-height: auto;
-    background-attachment: scroll;
+    background-attachment: fixed;
   }
 
   .partners-summary-section h2 {
@@ -2015,7 +2032,7 @@ body {
 
   .partners-bg {
     padding: 1.75rem 0.75rem;
-    background-attachment: scroll;
+    background-attachment: fixed;
   }
 
   .partners-summary-section h2 {
