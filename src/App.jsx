@@ -85,8 +85,19 @@ function App() {
       document.body.style.overflow = '';
       document.body.style.position = '';
       document.body.style.width = '';
-    };
+    }
   }, [isMenuOpen]);
+
+  // Navigate to specific program and scroll to it
+  const navigateToProgram = (programId) => {
+    setCurrentPage('programs');
+    setTimeout(() => {
+      const element = document.getElementById(programId);
+      if (element) {
+        element.scrollIntoView({ behavior: 'smooth', block: 'center' });
+      }
+    }, 100);
+  };
 
   // Auto-advance carousel every 4 seconds (slower)
   useEffect(() => {
@@ -415,10 +426,10 @@ function App() {
                   <div
                     key={program.title}
                     id={
-                      idx === 0 ? 'forest' :
-                        idx === 1 ? 'afforestation' :
-                          idx === 2 ? 'land' :
-                            idx === 3 ? 'women' :
+                      program.title === 'Afforestation & Large-Scale Tree Planting' ? 'afforestation' :
+                        program.title === 'Climate-Smart Agriculture & Soil Carbon Regeneration' ? 'climate-agriculture' :
+                          program.title === 'Women-Centered Capacity Building & Livelihood Enhancement' ? 'women' :
+                            program.title === 'Sustainable Land Acquisition & Green Agriculture Development' ? 'land' :
                               undefined
                     }
                     className={`program-card-vertical animate-on-scroll${idx % 2 === 0 ? ' left-img' : ' right-img'}`}
@@ -767,10 +778,10 @@ function App() {
             <div className="footer-section">
               <h3>What We Do</h3>
               <ul style={{ listStyle: 'none', padding: 0 }}>
-                <li><a href="#forest" onClick={() => setCurrentPage('programs')}>🌳 Forest Conservation & Protection</a></li>
-                <li><a href="#afforestation" onClick={() => setCurrentPage('programs')}>🌱 Afforestation & Reforestation</a></li>
-                <li><a href="#women" onClick={() => setCurrentPage('programs')}>👩 Women-Centered Empowerment</a></li>
-                <li><a href="#land" onClick={() => setCurrentPage('programs')}>🌾 Sustainable Land Development & Agriculture</a></li>
+                <li><a href="#afforestation" onClick={(e) => { e.preventDefault(); navigateToProgram('afforestation'); }}>🌱 Afforestation & Reforestation</a></li>
+                <li><a href="#climate-agriculture" onClick={(e) => { e.preventDefault(); navigateToProgram('climate-agriculture'); }}>🌾 Climate-Smart Agriculture & Soil Carbon Regeneration</a></li>
+                <li><a href="#women" onClick={(e) => { e.preventDefault(); navigateToProgram('women'); }}>👩 Women-Centered Empowerment</a></li>
+                <li><a href="#land" onClick={(e) => { e.preventDefault(); navigateToProgram('land'); }}>🌳 Sustainable Land Development & Agriculture</a></li>
               </ul>
             </div>
             {/* Quick Links */}
